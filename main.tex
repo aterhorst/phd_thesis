@@ -1,0 +1,167 @@
+\documentclass[12pt,twoside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {Images/} }
+\usepackage{natbib}
+\usepackage[sectionbib]{chapterbib}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{filecontents}
+\usepackage{pdflscape}
+\usepackage{epstopdf}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage[english]{babel}
+\usepackage[nottoc,notlof,notlot]{tocbibind} 
+\usepackage{booktabs}
+\usepackage{microtype}
+% \usepackage[document]{ragged2e}
+\usepackage[none]{hyphenat}
+\usepackage[font=small]{caption}
+\usepackage{longtable}
+\usepackage{siunitx}
+\usepackage{tabularx}
+\usepackage{lscape}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{pifont}
+\usepackage{tocloft}
+\usepackage[justification=centering]{caption}
+\usepackage{textcomp}
+% \usepackage{fixltx2e}
+\usepackage{hyperref}
+\usepackage[flushleft]{threeparttable}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+%   \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+
+\newcolumntype{R}[2]{%
+	>{\adjustbox{angle=#1,lap=\width-(#2)}\bgroup}%
+	l%
+	<{\egroup}%
+}
+
+\newcommand*\rot{\multicolumn{1}{R{90}{1em}}}% no optional argument here, please!
+
+\nocite{*} 
+\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
+
+
+
+
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%
+%\fancypagestyle{plain}{%
+%	\fancyhf{} % clear all header and footer fields
+%	\fancyfoot[C]{\bfseries \thepage} % except the center
+%	\renewcommand{\headrulewidth}{0pt}
+%	\renewcommand{\footrulewidth}{0pt}}
+%
+%\fancypagestyle{plain}{}
+%\fancyhf{}
+%\fancyhead[LE,RO]{Andrew Terhorst}
+%\fancyhead[RE,LO]{How social networks shape absorptive capacity}
+%\fancyfoot[CE,CO]{\rightmark}
+%\fancyfoot[LE,RO]{\thepage}
+
+%\renewcommand{\headrulewidth}{2pt}
+%\renewcommand{\footrulewidth}{1pt}
+
+
+
+
+
+\title{
+	{How Social Networks Shape Absorptive Capacity in Open Innovation: Food Industry Case Studies}\\
+	{\large Swinburne University of Technology}\\
+	{\includegraphics[width=0.3\columnwidth]{swinburne_university_of_technology.png}}
+}
+\author{Andrew Terhorst}
+\date{\today}
+
+\begin{document}
+
+\onehalfspacing
+\maketitle
+\renewcommand{\bibname}{References}
+
+ 
+
+\chapter*{Abstract}
+
+Abstract goes here
+
+\chapter*{Dedication}
+To mum and dad
+
+\chapter*{Declaration}
+I declare that..
+
+
+\chapter*{Acknowledgements}
+
+\tableofcontents
+
+\chapter*{Preface}
+
+\chapter{Introduction}
+\input{Chapters/chapter1}
+
+%\chapter{Impediments to knowledge sharing}
+%\input{chapters/chapter2}
+%
+%\chapter{Network perspective}
+%\input{chapters/chapter3}
+%
+%\chapter{Social networks}
+%\input{chapters/chapter4}
+%
+%\chapter{Research methodology}
+%\input{chapters/chapter5}
+%
+%\chapter{Case overview}
+%\input{chapters/chapter6}
+%
+%\chapter{Case One - Cold Chain Innovation}
+%\input{chapters/chapter7}
+%
+%\chapter{Case Two - Farm System innovation}
+%\input{chapters/chapter8}
+%
+%\chapter{Case Three - Collaborative Honey Bee Research}
+%\input{chapters/chapter9}
+%
+%\chapter{Discussion}
+%\input{chapters/chapter10}
+%
+%\chapter{Summary and conclusions}
+
+
+\pagebreak
+
+
+\bibliographystyle{apalike}
+\bibliography{Qiqqa2BibTexExport}
+
+%\appendix
+
+%\chapter{Survey questionnaire}
+%\input{chapters/appendixa}
+%
+%\chapter{Semi-structured interview questions}
+%\input{chapters/appendixb}
+%
+%\chapter{Formulae for computing centrality measures}
+%\input{chapters/appendixc}
+%
+%\chapter{Qualitative analysis code book}
+%\input{chapters/appendixd}
+%
+%\chapter{R code used in this study}
+%\input{chapters/appendixe}
+
+
+\end{document}
