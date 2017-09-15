@@ -4,8 +4,11 @@
 \graphicspath{ {Images/} }
 \usepackage{natbib}
 \usepackage[sectionbib]{chapterbib}
+\bibliographystyle{dcu}
+\setcitestyle{authoryear,open={(},close={)}}
 \usepackage{setspace}
 \usepackage{url}
+\usepackage{enumitem}
 \usepackage{filecontents}
 \usepackage{pdflscape}
 \usepackage{epstopdf}
@@ -35,7 +38,7 @@
 \MakeOuterQuote{"}
 
 %   \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
-
+\raggedbottom
 
 \newcolumntype{R}[2]{%
 	>{\adjustbox{angle=#1,lap=\width-(#2)}\bgroup}%
@@ -143,7 +146,6 @@ I declare that..
 \pagebreak
 
 
-\bibliographystyle{apalike}
 \bibliography{Qiqqa2BibTexExport}
 
 %\appendix
