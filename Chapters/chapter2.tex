@@ -1,329 +1,108 @@
-% literature review
-
+% Chapter 2 - Social network perspective
 \section{Introduction}
 
-The previous chapter referred to open innovation as being mostly about managing knowledge flows across organisational boundaries. Tacit knowledge is deemed vital for open innovation because it helps bridge cognitive gaps between partner firms and guides the learning and thought processes that produce novel ideas. Significant effort is required to share tacit knowledge. Moreover, sharing tacit knowledge is about empowering others so they can perform work. This chapter reviews the literature on individual motivation, inter-personal trust, and power dynamics to better understand how these psycho-social factors may potentially influence knowledge sharing behaviour. \medskip
+Transforming knowledge into valuable innovations depends very much on the configuration of knowledge networks \citep{tortoriello2010activating}. We can use social network analysis to examine network configurations and determine the extent to which these are shaped by individual attributes and knowledge properties. This chapter describes some of the salient features of social networks and key social mechanisms for mobilising knowledge. It then introduces exponential random graph models, an advanced social network analysis technique for examining network configurations. \medskip  
 
-Knowledge sharing is a key process in translating individual learning into organisational capability \citep{lam2010knowledge}. This study is concerned with how knowledge sharing behaviour affects absorptive capacity in open innovation collaborations. Referring to the iceberg metaphor in the previous chapter, one may assume most knowledge is held in the minds of individuals. Until a person decides to share his or her knowledge, it remains a hidden and untapped resource \citep{davenport1998working}. Most employees are inclined to hoard their knowledge to maintain some form of personal advantage \citep{riege2005three,milne2007motivation}. The question then is what motivates a person to share their knowledge?  \medskip
+\section{Social networks}
 
-\subsubsection{Self-determination theory}
+Social networks provide a way of thinking about social systems, one that focuses on the relationships among entities that make up the system \citep{borgatti2013analyzing,robins2015doing}. Such networks can be represented mathematically as graphs consisting of a set of vertices and a set of edges that connect vertices \citep{newman2010networks}. \medskip
 
-Self-determination theory asserts humans are innately driven to seek out competence, autonomy and relatedness \citep{ryan2000self}. Central to self-determination theory is the distinction between controlled and autonomous motivation. Autonomy involves acting with a sense of volition and having the experience of choice. Being controlled involves acting under some sense of pressure \citep{gagne2005self}. Intrinsically motivated behaviour, driven by people’s interest in the activity itself, is essentially autonomous. Less interesting activities require extrinsic motivation, where people's actions depend on the perceived contingency between behaviour and desire for implicit approval or tangible rewards. Extrinsic motivation can vary in the degree to which it is autonomous versus controlled. Externally regulated behaviour is a prototype of controlled motivation. Other types of extrinsic motivation result when behavioural regulation and the value associated with it are internalised. Regulation that has been taken in by a person but not accepted as their own is said to be introjected. Such regulation may be seen as a relatively controlled form of internalised extrinsic motivation. With identified regulation, people feel a greater sense of autonomy because their behaviour is aligned to their personal goals and identities \citep{gagne2005self}. 
+Vertices represent actors or nodes in a social network, which can be individuals, groups, organisations, regions, or even nations. Actors may be distinguished by binary, categorical or continuous attributes. For example, consider an individual actor classified as female (binary attribute), who works for a particular organisation (categorical attribute), with a specific number of years work experience (continuous attribute). \medskip
 
-The primary difference between self-determination theory and other work motivation theories is that self-determination theory focuses on the relative strength of autonomous versus controlled motivation rather than on the total amount of motivation. Research shows that autonomous motivation facilitates effective performance and well-being, whereas controlled motivation can detract from those outcomes, particularly if the task requires creativity, cognitive flexibility, or deep processing of information \citep{gagne2005self}. This is particularly salient for innovation.
+Edges represent relations or social ties between actors. Ties can be measured as directed or undirected and as binary or valued. Deciding whether to measure a tie as directed or undirected depends on the theoretical nature of the tie. For instance, co-membership is inherently undirected whereas authority is essentially directed. Directed and undirected ties can be measured as binary ties that either exist or do not exist, or as valued ties that can be stronger or weaker, transmit more or fewer resources, or have greater or lesser amount of contact \citep{scott2011sage}.\medskip
 
+Different types of relations may exist between actors with each type of relation giving rise to a corresponding network \citep{borgatti2013analyzing}. Measuring knowledge sharing ties would, for example, generate a knowledge sharing network. Assigning an attribute to the knowledge sharing tie allows us to qualify the relationship in terms of, say, the content or frequency of knowledge sharing (e.g. how much of the knowledge be shared is tacit in nature). \medskip
 
-\subsection{Theory of planned behaviour}
+Ties can be continuous or  according to similarities between actors or by relational roles, relational cognition, and events \citep{borgatti2013analyzing}. \medskip
 
-The theory of planned behaviour suggests that actions and behaviours reliably follow intentions \citep{ajzen1985intentions}. Intentions capture the motivational factors that influence a behaviour e.g. how hard people are willing to try or make an effort to perform the behaviour. People’s behaviour is strongly influenced by their confidence in their ability to perform it (notions of perceived behavioural control or self-efficacy). The theory of planned behaviour postulates three conceptually independent determinants of intention. The first is the attitude toward the behaviour and refers to the degree to which a person has a favourable or unfavourable assessment of the behaviour in question. The second predictor is a social factor termed subjective norm, which refers to the perceived social pressure to perform or not to perform the behaviour. The third antecedent of intention is the degree of perceived behavioural control or self-efficacy which refers to how people rate the ease or difficulty of performing the behaviour, based on past experience as well as anticipated impediments and obstacles \citep{ajzen1991theory}.
-
-The relative importance of attitude, subjective norm, and perceived behavioural control in the prediction of intention is expected to vary across behaviours and situations. Generally the more favourable the attitude and subjective norm with respect to a behaviour, the greater the perceived behavioural control, the stronger should be an individual’s intention to perform the behaviour under consideration \citep{ajzen1991theory}. 
-
-Behaviour is a function of core beliefs relevant to the behaviour. These include behavioural beliefs which influence attitudes toward the behaviour, normative beliefs which constitute the underlying determinants of subjective norms, and control beliefs which provide the basis for perceptions of behavioural control \citep{ajzen1991theory} 
-
-Behavioural intention can find expression in behaviour only if the behaviour in question is under volitional control \citep{ajzen1991theory}. 
-
-Attitudes toward the behaviour, subjective norms with respect to the behaviour, and perceived control over the behaviour are usually found to predict behavioural intentions with a high degree of accuracy. In turn, these intentions, in combination with perceived behavioural control, can account for a considerable proportion of variance in behaviour \citep{ajzen1991theory}.
-
-
-Motivation is a theoretical construct used to explain individual behaviour. A motive is what prompts a person to act in a certain way, or at least develop an inclination for specific behaviour. \citet{deci1985general} distinguish between intrinsic motivation, which refers to doing something because it is inherently interesting or enjoyable, and extrinsic motivation, which refers to doing something because it leads to a separable outcome. 
-
-\citet{davenport1997ten} argues people need to be highly motivated to share knowledge with others. Past studies have looked at how firms can motivate people to share knowledge \citep[e.g.][]{cabrera2002knowledge,ipe2003knowledge,cabrera2006determinants,wang2010knowledge,witherspoon2013antecedents,von2015s}. \citet{ipe2003knowledge} refers to internal and external factors that influence the motivation to share knowledge. Internal factors include the perceived power attached to the knowledge and reciprocity that results from sharing. External factors include the relationship with the recipient and rewards for sharing \citep{ipe2003knowledge}. \medskip
-
-There is a limit to what firms can do to motivate employees to share knowledge. \citet{davenport1997information} argue knowledge sharing is mostly a voluntary act, implying it is intrinsically motivated. \citet{bock2001breaking} find attitude toward knowledge sharing is negatively related to the expected rewards. In other words, incentives do not seem to alter the attitude that underlies knowledge sharing behaviour. One of the tenets of self-determination theory is that people are primarily motivated by innate needs for competence, autonomy, and relatedness \citep{ryan2000intrinsic}. People who share knowledge will perceive it as intrinsically satisfying because it is self-determined and allows them to increase their competencies \citep{kaser2001knowledge,gagne2005self,lam2010knowledge}. \medskip 
-
-
-
-
-
-research shows au- tonomous motivation leads to more positive behavioral out- comes than controlled motiva- tion
-
-\medskip
-
-Studies indicate knowledge sharing is mediated by intrinsic motivation \citep{bock2001breaking}. \citet{kaser2001knowledge} argue that as long as knowledge sharing is voluntary, sharing parties tend to perceive it as intrinsically satisfied because it is self-determined and allows them to increase their competencies. Intrinsic motivation is a key determinant of tacit knowledge transfer \citep{kaser2001knowledge,lam2010knowledge,dumbach2014establishing}. 
-
-\subsubsection{Self-efficacy}
-
-People with higher levels of self-efficacy are more likely to share knowledge and generate ideas with others \citep{tierney2002creative,lin2007effects}. 
-
-
-\subsection{Social theories}
-
-\subsubsection{Social exchange theory}
-
-Social exchange theory views exchange as a social behaviour that may result in both economic and social returns \citep{lambe2001social}. Such behaviour emerges as a result of the social process of mutual reinforcement over time. Inadequate reinforcement or asymmetry in economic or social returns may result in the breakdown of social relations \citep{homans1961social}. Social behaviour may also emerge when people act to maximise the potential benefit of economic and social returns, where one person does another a favour, and while there is a general expectation of some future return, the exact nature of this return is not stipulated in advance \citep{blau1986exchange}. This can lead to differentiation in social status and power based on the dependence of some actors on others for valued goods and services \citep{emerson1962power}. Relative differences in power may result in an unequal distribution of returns across positions in a network of exchange. Tensions generated by power inequality can result in network extension where power-disadvantaged actors, rather than banding together to form coalitions to balance power, may alternatively seek out new relations, reducing their dependence on a given actor for valued resources \citep{cook2013social}. 
-
-Trust is more likely to develop between partners when exchange occurs without explicit negotiations or binding agreements. Under such conditions, the risk and uncertainty of exchange provide the opportunity for partners to demonstrate their trustworthiness. Reciprocal exchange produces stronger trust and affective commitment than negotiated exchange \citep{molm2000risk}. 
-
-Commitment is defined as an interpersonal attachment leading people to exchange repeatedly with the same partners. Research suggests that power-use and commitment are inversely related \citep{cook1978power}
-
-%In this work we develop the perceived value of knowledge sharing as a multidimensional construct, grounded in assumptions of social exchange theory, consumer research and knowledge sharing literature. This conceptualization is intended to serve as a basis for the operationalization of perceived knowledge value in a future study on knowledge sharing intentions \citep{von2015s}.
-
-\subsubsection{Social cognitive theory}
-
-\subsubsection{Brokerage}
-
-
-citet{tortoriello2010activating} investigate the paradox in which diversity of knowledge and information available across organisational boundaries is necessary to spur innovation, yet at the same time may be a barrier for successful knowledge sharing and integration. Advantages stemming from bridging ties are contingent upon the configuration or microstructure of the ties forming the bridge \citep{tortoriello2010activating,tortoriello2015social}. Common third-party ties facilitate shared understanding, reduce friction due to differences in understanding, and promote cooperation and coordinated actions that are necessary to integrate and take advantage of diverse sources of knowledge (Tortoriello and Krackhardt 2010). Such brokerage is a crucial means by which intra- and inter-organisational networks evolve, expand and drive change (Obstfeld et al. 2014). The relationship between external knowledge and an individual’s ability to generate innovations is contingent on the type of knowledge and the individual’s position in the internal knowledge-sharing network (Tortoriello 2014; Tortoriello 2006). 
-
-
-\subsection{What does this mean in practice?}
-
-, meaning that knowledge sharing acts reliably follow knowledge sharing intentions \citep{witherspoon2013antecedents}. The more benefit the individual perceives as a result of sharing knowledge, the more likely the individual is to engage in knowledge sharing \citep{bock2001breaking,witherspoon2013antecedents}.
-
-The more internalised the individual’s motivation to share knowledge, the more likely that knowledge sharing will result \citep{gagne2009model,witherspoon2013antecedents}.
-
-The accumulation of tacit knowledge requires considerable investment of time and resources. Those who have invested heavily in their current knowledge may not be willing to unlearn. Long-held views and knowledge acquired and reinforced over a long period of time may be considered more difficult to unlearn than recently acquired knowledge, to which the individual has less of an emotional attachment \citep{rebernik2007fostering}.
-
-For unlearning to take place, intentional forgetting of some parts of existing individual and organizational knowledge is needed \citep{rebernik2007fostering}.
-
-Effective knowledge management includes dealing with the defensive mechanisms that impede communication. Common defensive mechanisms include avoiding the discussion of important issues, giving ambiguous messages and distorting information. To avoid these phenomena is very important to develop a culture which values openness, tolerates failures, encourages questioning of the way things are conducted and permits workers to challenge their superiors \citep{lubit2001keys}.
-
-
-
-
-\section{Work motivation}
-
-A large part of managing knowledge flows in open innovation is about creating a climate conducive to knowledge sharing. Understanding what motivates people to share and/or broker knowledge is a good first step. \medskip
-
-
-
-behaviour. It draws upon Self-Efficacy Theory \citep{bandura1994self}, Theory of Planned Behaviour \citep{ajzen1991theory} and Self-Determination Theory \citep{deci1985general} to understand  provide a useful frame of reference that we can use to consider knowledge sharing behaviour.
-
-
-- TPB and SDT can help with this.
-- Also important to consider knowledge as power.
-
-This includes encouraging people to willingly share or seek out knowledge and making sure the organisation profits in some way from knowledge sharing. Individual and organisational openness to learning and/or new knowledge is key here.
-
-\subsubsection{Social exchange theory}
-
-Social exchange theory views exchange as a social behaviour that may result in both economic and social returns \citep{lambe2001social}. Such behaviour emerges as a result of the social process of mutual reinforcement over time. Inadequate reinforcement or asymmetry in economic or social returns may result in the breakdown of social relations \citep{homans1961social}. Social behaviour may also emerge when people act to maximise the potential benefit of economic and social returns, where one person does another a favour, and while there is a general expectation of some future return, the exact nature of this return is not stipulated in advance \citep{blau1986exchange}. This can lead to differentiation in social status and power based on the dependence of some actors on others for valued goods and services \citep{emerson1962power}. Relative differences in power may result in an unequal distribution of returns across positions in a network of exchange. Tensions generated by power inequality can result in network extension where power-disadvantaged actors, rather than banding together to form coalitions to balance power, may alternatively seek out new relations, reducing their dependence on a given actor for valued resources \citep{cook2013social}. 
-
-Trust is more likely to develop between partners when exchange occurs without explicit negotiations or binding agreements. Under such conditions, the risk and uncertainty of exchange provide the opportunity for partners to demonstrate their trustworthiness. Reciprocal exchange produces stronger trust and affective commitment than negotiated exchange \citep{molm2000risk}. 
-
-Commitment is defined as an interpersonal attachment leading people to exchange repeatedly with the same partners. Research suggests that power-use and commitment are inversely related \citep{cook1978power}
-
-The theory of planned behaviour suggests actions and behaviours reliably follow intentions \citep{ajzen1985intentions}. According to this theory, three factors shape a person's intentions, namely their predisposition or attitude towards a particular behaviour, social norms regarding behaviour, and beliefs about one's control over the behaviour. These factors vary across behaviours and situations \citep{ajzen1991theory}. \medskip
-
-\citet{bock2005behavioral} find an individual's attitude towards knowledge sharing is driven not only by an expectation that such behaviour will be reciprocated, but also by social norms. They also find a person's sense of self-worth through knowledge sharing and organisational climate contributes to social norms around knowledge sharing. Moreover, extrinsic rewards have a negatively affect on individual attitudes towards knowledge sharing. Results from another study by \citet{lin2007effects} indicate motivational factors such as reciprocal benefits, sense of self-worth through knowledge sharing, and enjoyment in helping others, are significantly associated with knowledge sharing attitudes and intentions. \citet{lin2007effects} also finds extrinsic rewards do not influence knowledge sharing behaviour. \medskip
-
-Self-determination theory suggests humans are innately driven to seek out competence, autonomy, and relatedness \citep{deci1985general,ryan2000self}. The theory distinguishes between controlled and autonomous motivation. Being controlled involves acting under some form of pressure, whereas autonomy is about acting with a sense of volition and having the experience of choice \citep{gagne2005self}. Intrinsically motivated behaviour, driven by people’s interest in the activity itself, is essentially autonomous. Less interesting activities require extrinsic motivation, where people's actions depend on the perceived contingency between behaviour and desire for implicit approval or tangible rewards. Extrinsic motivation can vary in the degree to which it is autonomous versus controlled \citep{gagne2005self}. Externally regulated behaviour may be seen as a form of controlled motivation (e.g. being rewarded by others for doing something). Regulation that has been taken in by a person but not accepted as their own is said to be introjected. Such regulation may be seen as a controlled form of internalised extrinsic motivation. With identified regulation, people feel a greater sense of autonomy because their behaviour is aligned to their personal goals and identities \citep{gagne2005self}. What distinguishes self-determination theory from other work motivation theories is that self-determination theory focuses on the relative strength of autonomous versus controlled motivation, rather than on the total amount of motivation \citep{gagne2005self}. \medskip
-
-\citet{gagne2009model} presents a process model of knowledge-sharing motivation based on the theory of planned behaviour and self-determination theory (Figure \ref{fig:gagnemodel}). The model proposes that autonomous motivation predicts knowledge sharing intention, which in turn predicts knowledge-sharing behaviour. Studies show that autonomous motivation facilitates effective performance and well-being, unlike controlled motivation. This is especially true for tasks requiring creativity, cognitive flexibility, or deep processing of information \citep{gagne2005self}. \citet{gagne2009model} argues human resource management practices that focus on increasing autonomous motivation will lead to better knowledge sharing behaviour. \medskip
+Ties between actors who share something in common (e.g. work at the same location, are affiliated to the same body, participate in the same event, or share a common attribute) are referred to as \enquote{similarity ties}. Relational roles include kinship and other ties, such as friendship, advice, and managerial ties. Relational cognition refers to ties that are affective (e.g. like or dislike another actor) or perceptual (e.g. belief about the other actor) in nature. Relational events refer to ties defined by specific social interactions (e.g. a transaction of some kind) and flows (e.g. knowledge flows). Actors who know each other well are said to have strong ties with one another. Ties that are characterised by infrequent interaction, short histories, and limited emotional closeness may be characterised as weak ties \citep{baer2010strength}. 
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\linewidth]{Images/gagne_model}
-	\caption{Model of knowledge sharing motivation \citep{gagne2009model}.}
-	\label{fig:gagnemodel}
+	\includegraphics[width=0.9\linewidth]{tie_type}
+	\caption{Different types of ties. Modified after \citet{borgatti2009network}.}
+	\label{fig:tie_type}
 \end{figure}
 
-A recent study by \citet{llopis2016understanding} examines how a cooperative social climate, intrinsic motivation, and job autonomy influence knowledge sharing behaviour. They suggest the relation between a cooperative climate and knowledge sharing is contingent upon the employee's intrinsic motivation to share knowledge. Results from their survey of employees in a large multinational corporation indicate that people with higher levels of job autonomy are more likely to be influenced by a cooperative climate to share knowledge. More intrinsically motivated people are less likely to be influenced by climate when deciding to share knowledge. \citet{llopis2016understanding} suggest that a cooperative climate can encourage employees who are not intrinsically motivated to share knowledge . \medskip
 
-Most studies examining motivational factors that influence knowledge sharing behaviour do not distinguish between explicit and tacit knowledge. While other studies show that extrinsic rewards do not influence knowledge sharing behaviour in general \citep[e.g.][]{bock2001breaking,bock2005behavioral,lin2007effects}, \citet{hau2013effects} find this is true with respect to tacit knowledge sharing intentions, but not so for explicit knowledge sharing intentions. Their study confirms that reciprocity and enjoyment does influence knowledge sharing intentions more generally. \medskip
+Some ties are dependent on others. An example is friendship, which usually develops because of an pre-existing similarity tie (e.g. both actors live in the same neighbourhood, attend the same school, or work at the same place) or via a relational event tie (e.g. actors were introduced to each other at a specific event or worked together on a particular project). Actors are more likely to share knowledge (relational event) with others who have common interests (similarity tie) or with others they trust (relational cognition). \medskip 
 
-Intrinsic motivation is considered crucial for tacit knowledge sharing \citep{osterloh2000motivation}. 
+\section{Knowledge networks}
 
-\subsection{Knowledge is power}
+Actors in knowledge networks serve both as keepers of knowledge and as agents that seek out, communicate, and create knowledge \citep{phelps2012knowledge,pugh2013designing}. Knowledge by itself is simply a latent resource. It only becomes valuable once it is mobilised and used \citep{marabelli2012knowledge,freeman2015knowledge}. 
 
-Power and knowledge are inextricably intertwined \citep{gaventa2007power}. The current power literature is dominated by two contrasting views of power, namely power as domination, also referred to as power-over, and power as empowerment, often characterised as power-to \citep{haugaard2012rethinking}. 
+Examining the local configuration of knowledge networks can shed light on the social processes that transform new knowledge into innovations. For instance, actors that know each other well are said to have strong ties with one another. Such actors tend to have similar interests and are privy to the same knowledge. Strong ties tend to make people look inward and not be very receptive to external knowledge. Casual acquaintances, on the other hand, can be regarded as weak ties. Because acquaintances usually mix in different social circles, weak ties are more likely to provide actors access to new knowledge and opportunities \citep{granovetter1973strength}. \medskip
 
+Knowledge networks with an abundance of weak ties are typically sparse with many disconnected parts or \enquote{structural holes} \citep{burt1992structural}. Actors who bridge otherwise disconnected parts of the knowledge network are termed knowledge brokers. They make connections between those who need knowledge and those who have it \citep{davenport1998successful}. Not only do knowledge brokers connect otherwise disconnected groups of people, they also facilitate the translation, integration and combination of diverse knowledge \citep{davis2010agency}.
+Knowledge brokers are able to identify and establish strategic relationships with keepers of knowledge. Some knowledge brokers exploit this to their own advantage while others try establish new relations between otherwise disconnected people \citep{gould1989structures,burt1992structural,obstfeld2014brokerage}. \medskip
 
+Though brokerage across structural holes in a disconnected network is a source of value, networks with fewer structural holes engender trust and reduce opportunism, leading to more productive collaborations \citep{ahuja2000collaboration}. Strong ties are more effective than weak ties in enhancing knowledge transfer and learning as well as an individual’s ability to benefit from collaborating with diverse partners \citep{rost2011strength,phelps2012knowledge,tortoriello2012bridging}. \medskip
 
-% power over, power within is seen as repressive
-% productive use of power
+\section{Social network analysis}
 
-The network perspective treats power as inherently relational \citep{ibarra1993network}. Power arises from occupying advantageous positions in networks of social relations. The way that an actor is embedded in a social network either imposes constraints on the actor or presents the actor with opportunities. Actors that have fewer constraints and more opportunities than others, occupy favourable structural positions. Being in a favoured position means that an actor may extract better bargains in exchanges, have greater influence, and be a focus for deference and attention from those in less favoured positions \citep{burt1992structural,hanneman2005introduction}. 
+The aim of social network analysis is detecting and interpreting patterns of social ties between actors \citep{wasserman1994social,de2011exploratory}. Most basic questions in social network analysis involve the measurement and modelling of particular structural properties such as reciprocity, degree distribution, cyclic and transitive closure, and homophily \citep{butts2008social,snijders2011statistical}.
 
-There is a co-dependent relationship between power and influence. An actor with power is able to influence others while an actor with influence has power. 
+Reciprocity is a basic feature of social networks. Social exchange theory \citep{emerson1976social} and game theory (Axelrod, 1984) suggest dyadic relationships have a tendency to be symmetrical. Reciprocity is a way of achieving balanced and more stable relations. Non-reciprocated or asymmetric ties are more likely to be unstable.
 
-Network centrality measures provide a way to assess how advantageous an actor's position is in a social network. For example, in-degree centrality can be used to measure the number of incoming knowledge ties for each and every actor. High in-degree centrality suggests an actor is empowered because he or she is receiving knowledge from a number of different sources. Burt's measure of constraint measures how much access an actor to network resources \citep{burt1987social}. 
+Degree distribution considers actors who are either highly connected and or have few connections. and this led to models for node centrality reviewed by Freeman (1979). An important theoretical account was the rich-get-richer phenomenon (de Solla Price 1976). This will lead to a high dispersion of the nodal degrees, which then may further lead to core-periphery structures (Borgatti and Everett, 1999) or various other types of hierarchical structures. 
 
+Transitivity of ties is expressed by the saying \enquote{friends of my friends are my friends}, and was proposed as an essential element of networks by Rapoport (1953a,b). Davis (1970) found large-scale empirical support for transitivity in networks. 
 
+Transitivity is rooted deeply in sociology, going back to authors such as Simmel (1950) and elaborated more recently by Coleman (1990). Transitivity therefore also has been called clustering (Watts, 1999). Transitivity can have two faces: it may point to a hierarchical ordering or to a clustered structure. These two can be differentiated by the aid of the number of 3-cycles. A relatively high number of 3-cycles points toward clustering, a relatively low number toward hierarchy. Davis (1970) found empirically that social networks tend to contain a relatively low number of 3-cycles, indicating the pervasiveness of hierarchies in social networks. Hierarchies in directed networks, as exhibited by high transitivity and few 3-cycles, may be local or global. A global hierarchy will be indicated by the ordering of the in-degrees and/or out-degrees, where the typical pattern e.g., in esteem or advice asking, is directed from low to high. In a purely global hierarchy, which can be seen, e.g., in some advice networks, in a statistical model the degree differentials will be sufficient to explain the low number of 3-cycles. But local hierarchies are possible in directed networks even when the in-degrees and out-degrees exhibit rather little variability.
 
+Homophily is the tendency of similar actors to relate to each other \citep{mcpherson2001birds}. Theoretical arguments can be based on opportunity, affinity, ease of communication, reduced transaction costs and break-off risks, and organisational foci composed of similar individuals. This leads to a higher probability of ties being formed between actors with similar values on relevant covariates \citep{snijders2011statistical}.
 
-\subsubsection{Personality}
+To fully understand the implications of social relations between actors, one has to consider how these are shaped by broader patterns of social interaction \citep{scott2011sage}. This requires more than simply measuring the basic characteristics of networks. A set of assumptions is needed to best describe and explain social phenomena of interest. This may involve applying an existing psychological or social theory to test hypotheses about social relations. Alternatively, one may use networks to explain specific outcomes or assess how social processes are influenced by network effects \citep{scott2011sage,borgatti2013analyzing}. \medskip
 
-Trait theory is an approach to the study of human personality. Traits define habitual patterns of behaviour, thought, and emotion. They differ across individuals and are stable over time. The \enquote{five-factor model} describes human personality in terms of five traits, namely \enquote{openness to experience}, \enquote{conscientiousness}, \enquote{extraversion}, \enquote{agreeableness}, and \enquote{neuroticism} \citep{mccrae1992introduction}. Table \ref{personality} lists key features of each trait. Essentially, a person's personality can be described in terms of the combined strength of each trait. \medskip 
+\section{Exponential random graph models}
 
-\begin{landscape}
-	\begin{table}[]
-		\centering
-		\caption{Five-factor model personality traits \citep{mccrae1992introduction,howard1995big}.}
-		\label{personality}
-		\begin{tabular}{@{}lll@{}}
-			\toprule
-			Factor & Adjectives & Description \\ \midrule
-			Extraversion (E) & \begin{tabular}[c]{@{}l@{}}Active\\ Assertive\\ Energetic\\ Enthusiastic\\ Outgoing\\ Talkative\end{tabular} & Extraversion refers to the number of relationships with which one is comforatble. High extraversion is characterised by a larger number of relationships and a larger proportion of one's time spent in enjoying them. Low extraversion is characterised by a smaller number of relationships and a smaller proportion of one's time spent in pursuing those relationships. \\
-			Agreeableness (A) & \begin{tabular}[c]{@{}l@{}}Appreciative\\ Forgiving\\ Generous\\ Kind\\ Sympathetic\\ Trusting\end{tabular} & Agreeableness refers to the number of sources from which one takes one's norms for right behaviour. High agreeableness describes a person who defers to a great many norm sources, such as a spouse, religious leader, friend, boss, or popular culture idol. Low agreeableness describes one who is inclined to only follows one's inner voice. A highly agreeable person will march to the drumbeat of many different drummers, while a less agreeable person marches only to their own drumbeat. \\
-			Conscientiousness (C) & \begin{tabular}[c]{@{}l@{}}Capable\\ Organised\\ Resourceful\\ Reliable\\ Responsible\\ Thorough\end{tabular} & Conscientiousness refers to the number of goals on which one is focused. High conscientiousness refers to a person who focuses on fewer goals and exhibits self-discipline associated with such focus. Low conscientiousness refers to one who pursues a larger number of goals and exhibits distractability and spontaneity associated with diffuse focus. \\
-			Neuroticism (N) & \begin{tabular}[c]{@{}l@{}}Anxious\\ Self-pitying\\ Tense\\ Touchy\\ Worrying\end{tabular} & Neuroticism is a measure of affect and emotional control. Low levels of neuroticism indicate emotional stability whereas high levels of neuroticism increase the likelihood of experiencing negative emotions. A person with a high level of neuroticism is reactive and more easily bothered by stimuli in their environment. Such a person is prone to becoming unstable,worried, temperamental, and sad. A resistant person, on the other hand, needs strong stimuli to be provoked. \\
-			Openness to experience & \begin{tabular}[c]{@{}l@{}}Artistic\\ Curious\\ Imaginative\\ Insightful\\ Original\\ Wide interests\end{tabular} & Openness refers the number of interests to which one is attracted and the depth to which those interests are pursued. High openness refers to a person with relatively more interests and, consequently, relatively less depth within each interest, while low openness refers to a person with relatively few interests and relatively more depth in each of those interests. \\ \bottomrule
-		\end{tabular}
-	\end{table}
-\end{landscape}
+Exponential random graph models (ERGMs) are a class of statistical model for social networks originally developed by \citet{frank1986markov} and refined by \citet{wasserman1996logit} and \citet{pattison1999logit}. ERGMs have the capacity to address complex social structures. Recent model derivations are able to examine both individual-level variables and structural relations simultaneously \citep{robins2007recent}. \medskip
 
-Personality has been identified as a factor in knowledge sharing. \citet{matzler2008personality} found agreeableness, conscientiousness and openness to experience are positively correlated with knowledge sharing. People who are conscientious and introverted are more likely to share their tacit knowledge \citep{borges2012tacit}. \citet{stock2014impacts} found those who score higher on openness to experience are more likely to generate new ideas and that being introvert is positively associated with the successful realisation of ideas. They also found those who possess high levels of conscientiousness and neuroticism are more likely to commercially diffuse their innovations. \medskip
+An ERGM is essentially a pattern recognition device which breaks a network down into its constituent network motifs or configurations and then test if particular configurations occur more or less frequently than would be expected by chance alone. Network configurations are patterns of social network ties assumed to represent underlying social processes or mechanisms \citep{lusher2014cooperative}. For example, a theory may suggest that actors with specific attributes are more likely to receive social ties. This can be tested using an ERGM to see if actors with such attributes are receiving more ties than would be expected by chance alone. That way, a researcher can test certain hypotheses or propositions about tie formation relating to theory \citep{robins2007recent}. \medskip
 
+ERGMs permit differentiation between structural network effects and processes related to actor attributes. Unlike the assumption of independence of observations in standard statistical tests, ERGMs are based on the assumption of conditional dependence \citep{pattison2002neighborhood}. An ERGM is similar to a logistic regression, but is more sophisticated because it can handle complex dependency assumptions. This reflects social reality where ties are largely interdependent \citep{kadushin2012understanding}. \medskip
 
-\section{Brokerage}
-
-\citet{cohen1990absorptive} see brokers with diverse expertise and contacts playing a key role in the acquisition of knowledge. They believe a diversity of internal perspectives is important to counter resistance towards external knowledge or ideas. \medskip
-
-Brokerage underpins a broad range of organisational phenomena and represents an important mechanism by which intra- and inter-organisational networks evolve and drive change. Brokerage may be conceptualised as a social process that shapes interaction between two or more parties in a wide variety of triadic structures \citep{obstfeld2002knowledge}. Much of the organisational literature dealing with social structures considers brokerage in terms of an open triad, one in which a broker has ties to two alters who are not tied to one another. For example, \citet{marsden1982brokerage} defines brokerage as a mechanism \enquote{by which intermediary actors facilitate transactions between other actors lacking access or trust in one another}.
-
-\citet{fernandez1994dilemma} describe brokerage as a \enquote{relation in which one actor mediates the flow of resources or information between two other actors who are not directly linked}. They argue brokerage \enquote{does not permit the endpoints of a brokerage relation to be directly connected}. \citet{burt1992structural} believes brokers who stand between unconnected alters not only benefit from the novel information that such a structure affords, but are also able to play the disconnected actors against one another. This implies brokerage is more about empowerment of self than about empowering others. \medskip
-
-\citet{obstfeld2014brokerage} describe three strategic orientations to brokerage: \emph{conduit brokerage} is about a third-party who transfers information, knowledge, or other resources between two disconnected parties. The broker mediates rather than moderates the relationship between two others and may help them synthesise new knowledge. With \emph{tertius gaudens brokerage}, the broker aims to exploit differences between two parties by either keeping them apart or playing one against another. In contrast, \emph{tertius iungens brokerage} is about a third-party who introduces two otherwise disconnected parties to each other and encourages them to collaborate (Table \ref{brokerage}). \medskip 
+Purely structural effects reflect self-organising or endogenous processes in which ties form due to the presence or absence of other ties. In the case of reciprocity, for example, because one person has first done someone a favour, that other person is more likely to reciprocate the favour (\enquote{you scratch my back because I have scratched yours}). One tie follows on from the other i.e. one tie is dependent upon the other. Ties may also form due to actor attributes and are known as actor-relation effects in ERGMs. The tendency of individuals to associate and bond with similar others (also known as \enquote{homophily}) is an example of an actor-relation effect. \medskip 
 
 \begin{table}[]
-\small
-\centering
-\caption{Three forms of brokerage process. Reproduced from \citet{obstfeld2014brokerage}.}
-\label{brokerage}
-\begin{tabularx}{\textwidth}{>{\raggedright}p{3.5cm}>{\raggedright}p{3.5cm}>{\raggedright}p{3.5cm}>{\raggedright}p{3.5cm}}
-	\toprule
-	& \multicolumn{1}{c}{Conduit} & \multicolumn{1}{c}{Tertius Gaudens} & \multicolumn{1}{c}{Tertius Iungens} \\ 
-	\midrule
-	& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.7\linewidth]{Images/CDT_brokerage} \end{minipage}  & \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.7\linewidth]{Images/TG_brokerage_1} \end{minipage}  & \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.7\linewidth]{Images/TI_brokerage} \end{minipage}   \\
-	&  &  & \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.7\linewidth]{Images/TG_brokerage_2} \end{minipage}  &  \\
-	\midrule
-	Open network\\(absence of A-C tie) & B transfers information, knowledge, or other resources between A and C, where A and C have no prospect of meeting. & B plays A and C against one another or keeps A and C apart. & B introduces A and C where A and C have no prior tie. &
-	\midrule
-	Closed Network\\(presence of A-C tie) & B facilitates transfer between A and C and may help synthesise new knowledge. & B cultivates conflict,competition, or separation between A and C (divide et impera) & B coordinates new collaborative action between A and C. & \\ 
-	\bottomrule
-\end{tabularx}
-\end{table}
-
-With tertius iungens brokerage, a third party introduces or facilitates interaction between two other parties. While tertius gaudens exploits disconnection or negative ties, teritius iungens actively pursues coordination. Tertius iungens brokerage is most opportune when the broker detects opportunities to connect complementary, rather than redundant, alter attributes such as resources and abilities \citep{obstfeld2014brokerage}. Both conduit and iungens draw on knowledge articulation, or the social process by which knowledge is made more explicit, useful, or relevant to the situation at hand \citep{obstfeld2005social,obstfeld2011saying,obstfeld2012creative}.
-
-From an open innovation perspective, \emph{tertius iungens} brokerage is quite important, especially in the early stages of collaboration, when many actors do not know fellow collaborators in partner organisations. Not only that, knowledge held by third parties is also likely to be unfamiliar. Once ties have been established through \emph{tertius iungens} brokerage, \emph{conduit} brokerage is needed to help synthesise and transform knowledge into novel ideas \citep{fleming2007collaborative,lingo2010nexus,quintane2016brokers}. \citet{gould1989structures} describe \emph{conduit} brokerage in terms of \emph{coordination}, \emph{liaison}, \emph{itinerant}, \emph{representative}, and \emph{gatekeeper} roles (Table \ref{gf_params}). Each role expresses a different power dynamic and one should be able to use the relative proportion of each role to characterise power-relations in open innovation collaborations. \medskip
-
-\begin{table}[]
-	\small
+	\tiny
 	\centering
-	\caption{Gould-Fernandez brokerage roles. After \citet{gould1989structures} and \citet{butts2016package}.}
-	\label{gf_params}
-	\begin{tabularx}{\textwidth}{@{}lcl@{}}
+	\caption{Exponential random graph model parameters used in this study.}
+	\label{erm_params}
+	\begin{tabular}{lcl}
 		\toprule
-		\multicolumn{1}{c}{Role} & \multicolumn{1}{c}{Motif} & \multicolumn{1}{c}{Explanation} \\ \midrule
-		Liaison (b\textsubscript{O})			&  \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/b_O} \end{minipage}	& \begin{tabular}[c]{l}Broker mediates contact between two\\ individuals from different groups,\\ neither of which is the group to\\ which he or she belongs.\end{tabular}\\ [10ex]
-		Representative  (b\textsubscript{IO})	& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/b_IO} \end{minipage}   & \begin{tabular}[c]{l}Broker mediates an outgoing contact\\ from an in-group member to an\\ out-group member.\end{tabular}\\ [10ex]
-		Gatekeeper (b\textsubscript{OI})		& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/b_OI} \end{minipage}   & \begin{tabular}[c]{l}Broker mediates an incoming contact\\ from an out-group member to an\\ in-group member. \end{tabular}\\ [10ex]
-		Itinerant broker (w\textsubscript{O})	&  \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/w_O} \end{minipage}   & \begin{tabular}[c]{l}Broker mediates contact between two\\ individuals from a single group to\\ which he or she does not belong. \end{tabular}\\ [10ex]
-		Coordination (w\textsubscript{I})		& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/w_I} \end{minipage}    & \begin{tabular}[c]{l}Broker mediates contact between two\\ individuals from his or her own\\ group. \end{tabular}\\ 
-		\bottomrule
-	\end{tabularx}
+		Parameter & Graphic & Explanation  \\ \midrule
+		\textbf{Purely structural effects} & & \\
+		Arc (edge)                    	& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/Arc} \end{minipage} 					& \begin{tabular}[c]{l}Baseline propensity for a tie to form in the absence of other\\ effects.\end{tabular} \\ \\
+		Reciprocity (mutuality)       	& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/Reciprocity} \end{minipage} 			& \begin{tabular}[c]{l}Propensity for a tie from one actor to a second when there\\ is already a tie from the second to the first.\end{tabular} \\ \\                                                                                                       \\
+		TwoPath (simple connectivity) 	& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/Twopath} \end{minipage}        		& \begin{tabular}[c]{l}Propensity for ties to form as part of simple path formations. \end{tabular} \\ \\
+		AinS (popularity spread)      	& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.6\linewidth]{Images/AinS} \end{minipage}        			& \begin{tabular}[c]{l}Propensity for dispersion in the in-degree distribution,\\ indicating there are a few highly popular actors. \end{tabular} \\ \\
+		AoutS (activity spread)       	& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.6\linewidth]{Images/AoutS} \end{minipage}  				& \begin{tabular}[c]{l}Propensity for dispersion in the out-degree distribution,\\ indicating there are a few highly active actors. \end{tabular}  \\ \\
+		AT-T (path closure)           	& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.6\linewidth]{Images/AT-T} \end{minipage}        			& \begin{tabular}[c]{l}Propensity for ties to form as part of transitive triad or a\\ multiple transitive configuration. \end{tabular} \\ \\
+		AT-C (cyclic closure)         	& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.6\linewidth]{Images/AT-C} \end{minipage}        			& \begin{tabular}[c]{l}Propensity for ties to form as part of a cyclic triad or a\\ multiple cyclic configuration. \end{tabular} \\ \\
+		A2P (multiple connectivity)   	& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.6\linewidth]{Images/A2P} \end{minipage}       				& \begin{tabular}[c]{l}Propensity for ties to form as part of formations involving\\ multiple short paths between actors. \end{tabular} \\ \\
+		\textbf{Actor-relation effects} & & \\
+		Attribute sender              	& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/Sender} \end{minipage}        			& \begin{tabular}[c]{l}Propensity for a tie to be directed from an actor with a\\ particular attribute. \end{tabular} \\ \\
+		Attribute receiver             	& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/Receiver} \end{minipage}        		& \begin{tabular}[c]{l}Propensity for a tie to be directed toward an actor with a\\ particular attribute. \end{tabular} \\ \\
+		Attribute match               	& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/Match} \end{minipage}       			& \begin{tabular}[c]{l}Propensity for a tie to form between actors with the same\\ categorical attribute.\end{tabular} \\ \\
+		Attribute mismatch reciprocity 	& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/MisMatchReciprocity} \end{minipage}  	& \begin{tabular}[c]{l}Propensity for a tie to form between actors with a\\ non-matching categorical attribute.\end{tabular} \\ \\
+		Attribute difference          	& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/Difference} \end{minipage}       		& \begin{tabular}[c]{l}Propensity for a tie to form between actors with a similar\\ continuous attribute. \end{tabular} \\ \\
+		Attribute product             	& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/Product} \end{minipage}        		& \begin{tabular}[c]{l}Propensity for a tie to form between actors who both score\\ highly on the same continuous attribute. \end{tabular} \\ \\
+		\textbf{Actor-brokerage effects} & & \\
+		b\textsubscript{O} (liaison role)			      	&  \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/b_O} \end{minipage}   & \begin{tabular}[c]{l}Propensity to have brokers who mediate communication\\ between two individuals from different groups, neither of\\ which they belong to.\end{tabular}\\ \\
+		b\textsubscript{IO} (representative role)		   	& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/b_IO} \end{minipage}   & \begin{tabular}[c]{l}Propensity to have brokers who mediate communication\\ from in-group members to out-group members.\end{tabular}\\ \\
+		b\textsubscript{OI} (gatekeeper role) 				& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/b_OI} \end{minipage}   & \begin{tabular}[c]{l}Propensity to have brokers who mediate communication\\ from out-group members to in-group members. \end{tabular}\\ \\
+		w{\textsubscript{O} (itinerant broker)			&  \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/w_O} \end{minipage}   & \begin{tabular}[c]{l}Propensity to have brokers who mediate communication\\ between two individuals from a single group to which they\\ do not belong. \end{tabular}\\ 
+		w\textsubscript{I} (coordination role)				& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/w_I} \end{minipage}    & \begin{tabular}[c]{l}Propensity to have brokers who mediate communication\\ between two individuals from his or her own group. \end{tabular}\\ \\	
+		\textbf{Network covariate effects} & & \\
+		Dyadic covariate             	& \begin{minipage}{.2\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/DyadicCovariate} \end{minipage}    	& \begin{tabular}[c]{l}Propensity for a tie of one type to form from one actor to\\ another if a tie of another type is already present, though\\ the covariate network is fixed (i.e. exogenous) in the\\ model, and so cannot vary. \end{tabular} \\\bottomrule                                                                                                       
+	\end{tabular}
 \end{table}
 
-Effective brokerage strategies may require complex combinations and sequences of different brokerage behaviours over time. Skilled brokerage often involves selective deployment of these approaches with different actors or for different objectives. Different combinations of tertius iungens and tertius gaudens behavior are necessary to tailor brokerage strategies to match the situation \citep{obstfeld2014brokerage}. ... Davis’s (2011) study of innovative alliances in the computer industry found that active pruning of old ties may be necessary before man- agers can effectively facilitate new ties, suggesting that sequences of gaudens and iungens behavior are sometimes necessary.
+ERGMs provide a more principled way of making inferences about the association between actor attributes and network ties because ERGMs can distinguish between ties formed due to actor attributes or whether an actor’s popularity is the result of being embedded within other purely structural network structures \citep{lusher2013exponential}. Alternative methods used to assess the effect of actor attributes on network structures, such as linear regression, are unable to make such distinctions, and are thus more limited regarding the conclusions such methods can draw. ERGMs also allow multiple explanations for network tie formation to be examined simultaneously in one model, comparing one effect against another to see which is more likely to be associated with the formation of network ties (e.g. is it age or experience that matters in advice-seeking?). \medskip
 
-\section{Defining innovation}
+\section{Conclusion}
 
-This study defines innovation as \enquote{the development and implementation of new ideas by people who, over time, engage in relationships with others within an institutional and environmental context} \citep{van1986central}. So long an idea is perceived as new to the people involved, it should be seen as an innovation even though others may view it as an imitation of something that exists elsewhere \citep{van1986central}. From a business perspective, innovation is about renewal of the enterprise so it can enhance its ability to create value and remain competitive \citep{schumpeter1950capitalism}. Failure to innovate places a firm's ability to survive and prosper at risk \citep{bessant2005managing}. \medskip 
+The micro-structure of knowledge-sharing networks should reveal much regarding the social mechanisms of knowledge acquisition, assimilation, transformation, and application \citep{reagans2003network,phelps2012knowledge,tortoriello2010activating,tortoriello2015social}. For example, a researcher could examine how individual attributes and knowledge properties relate to specific patterns of social interaction. The influence of power-relations on absorptive capacity can be assessed by examining patterns of knowledge brokerage \citep{burt2004structural,obstfeld2005social,obstfeld2014brokerage}. Examining closure in tacit knowledge networks can help explain knowledge assimilation processes and the level of collaboration. Chapter 3  introduces social network analysis and explains how this can be used to assess practices that build absorptive capacity in open-innovation collaborations. 
 
-\section{The multifaceted nature of knowledge}
-
-
-\section{Sources of competitive advantage}
-
-According to the resource-based view of the firm, competitive advantage stems from the application of tangible and intangible resources available to the firm \citep{wernerfelt1984resource,peteraf1993cornerstones}. Sustained competitive advantage can be achieved if these resources are valuable, rare, inimitable, and non-substitutable \citep{barney1991firm}. A derivative of the resource-based view is the knowledge-based view of the firm, which considers knowledge to be the most important resource of a firm \citep{grant1996toward}. The knowledge-based view emphasises the importance of having effective processes for transferring knowledge across organisational boundaries \citep{kogut1992knowledge,grant1996toward}. This requires a relational view that focuses on the social structures, routines, and processes for knowledge exchange \citep{dyer1998relational,nahapiet1998social}. Open innovation substantiates the relational view of competitive advantage. The business model that underpins open innovation explains how relational rents can be generated from knowledge sharing activities \citep{durst2013success}. \medskip
-
-Transforming the existing business model to support open innovation, changing internal approaches to research and development, building a more open culture, finding appropriate organisations to partner with, and protecting intellectual property are some of the more pressing challenges \citep{dahlander2010open,sieg2010managerial,lichtenthaler2011your,durst2013success,roper2013externalities,aloini2016structured}. 
-
-While tacit knowledge can play a key role in overcoming relative differences in absorptive capacity, mobilising tacit knowledge is a challenge in itself \citep{gassmann2004towards,bahemia2010contingent,bogers2011open}. More on the challenges of overcoming absorptive capacity and mobilising tacit knowledge below. \medskip
-
-\subsubsection{Relative differences in absorptive capacity}
-
-
- 
-Despite a vast body of research that has examined various aspects of absorptive capacity, the concept remains elusive for both researchers and practitioners \citep{duchek2013capturing,omidvar2013revisiting}. Early conceptualisations of absorptive capacity emphasised the importance of prior related knowledge to help bridge cognitive gaps \citep{cohen1989innovation,cohen1990absorptive}. These early conceptualisations paid little attention to the processes that build absorptive capacity \citep{zahra2002absorptive}. More recent conceptualisations treat absorptive capacity as a dynamic capability\footnote{Ordinary capabilities encapsulate the core business functions of operations, administration, and governance. Dynamic capabilities, on the other hand, refer to the firm's capacity to sense new opportunities, mobilise resources to take advantage of opportunities, and maintaining competitiveness through enhancing, protecting and configuring its tangible and intangible resources \citep{teece2007explicating,teece2014foundations}.} that integrates processes for acquiring, assimilating, transforming, exploiting new knowledge \citep{zahra2002absorptive,lane2006reification,todorova2007absorptive,volberda2010perspective,lewin2011microfoundations,marabelli2014knowing}. Absorptive capacity may be viewed as a form of organisational learning addressing new external knowledge, one that involves processes and routines to share, communicate, and transfer individual learning to the group and organisational levels \citep{sun2010examination}. \medskip
-
-Building absorptive capacity is challenging because it cuts across multiple levels and is contingent not only on prior related knowledge and social mechanisms for integrating diverse knowledge, but also on the strength or weakness of appropriability regimes \footnote{The term \enquote{appropriability regime} refers to the extent to which knowledge and innovations can be protected from imitators \citep{teece1998capturing,hurmelinna2007nature}.} and nature of power-relations \citep{todorova2007absorptive,easterby2008absorptive,duchek2013capturing}. \medskip 
-
-Knowledge is something that exists on a spectrum where at one extreme, it is almost completely tacit, that is knowledge held in peoples' minds and bodies. At the other extreme, knowledge is almost completely explicit, existing in codified or structured form and accessible to other people \citep{polanyi1966tacit,inkpen1998knowledge,leonard1998role,cavusgil2003tacit}.  
-
-Another way to facilitate the transfer of tacit knowledge is through communities of practice \citep{lave1991situated,brown2001knowledge,smith2001role,cox2005communities,easterby2008inter}. These function as a social instrument to create, share and steward knowledge, and are a pragmatic basis of an organisation’s absorptive capacity and significant sites of innovation \citep{brown1991organizational}. \medskip
-
-
-
-
-
-%The literature chapter might pick up from the introduction of the research focus and why it is a significant area of inquiry. Thus the issue of collaborative practice and  knowledge-sharing in the contemporary innovation and creativity policy and business environment might be worthwhile mentioning as background. These seem to fit in well with your propositions under literature review
- 
-%The wide base of the pyramid then narrows to the role that open innovation has been seen as playing in this environment. My choice would be to discuss social capital building as a form of competitive advantage drawing from Nahapiet and Ghoshal's work. This also allows the introduction of collaboration and power through knowledge creation at a macro and micro level and fits well with the more critical appraisal of N & G. This area might be expanded when you produce the first draft.
-
-%This issue of power and knowledge creation, transfer could provide a link with motivation as a key concept from the perspective of exploring intrinsic/extrinsic motivation i.e. what are the boundaries or limits of extrinsic motivation in dynamic and contextual situations. This allows your critique of Gagne's work that in organisations knowledge sharing behaviour can be explained in terms of TPB/SDT [Gagne 2009]. The feedback to date suggests we might want to discuss further the contribution of TPB theory in the context in which you want to explore it, but I think, as you define it below, it has a place in framing issues apparently highlighted within your data.
-
-%Finally, the role of brokerage also appears to be conceptually synergistic with power wileding in knowledge sharing and open innovation, so I like your 3rd proposition.
-
-%You  also seem to be suggesting that your findings will identify certain skillsets, approaches and behaviours that appear to have value in effective open innovation (from the perspectives of your subjects when interviewed) and which might highlight useful approaches in given contexts (stages of the project and characteristics and stakes of stakeholders being factors worth considering).
-
-%So I think that you have a good framework here which we can refine as your analysis and findings become clearer and we can identify any conceptual issues that might need raising either upfront in your literature review or in the context of your discussion of findings and further research.
-
-
- 
-
-
-Relative differences in absorptive capacity can impede the flow of knowledge across organisational boundaries, create power imbalances, and undermine alliance performance.  
-- Need to recognise knowledge is a form of power.
-- Useful to understand how knowledge sharing behaviour is influenced by personal motivation, power-relations, and organisational factors.
- 
-\section{Characterising tacit knowledge} 
-
-- Very hard to describe tacit knowledge. 
-- Not possible to measure directly
-- Indirect approaches.
-
-\section{Knowledge is power}
-
- 
-\section{Motivation to share knowledge}
- 
-- What is motivation? Motivation is a theoretical construct used to explain behaviour.
-- people are motivated to share knowledge either out of self-interest, altruism, or both. [Hsiu-Fen Lin, 2007]
-- people motivated out of self-interest do so to empower themselves in two ways - satisfy some innate need or gain some personal advantage by being gatekeeper of knowledge.
-- people motivated out of altruism want everybody, including themselves, to succeed. They succeed if everybody else succeeds.
-- we can look at motivation in terms of self-determination theory (innate needs) and brokerage (behaviour, actions).
-- Tacit knowledge requires more effort (i.e. higher levels of motivation) to communicate.  [osterloh and frey 2000]
-- Past studies show that intrinsic motivation predicts tacit knowledge sharing e.g.
- 
-\subsection{Self-determination theory}
- 
- 
-- Many motivational theories. With innovation, interested on motivation for learning.
-- Innovation is intrinsically motivated. [Bhaduri & Kumar 2011]
-- SDT is useful for assessing intrinsic and extrinsic motivation.
-- SDT argues behaviour is driven by innate need for competence, autonomy and relatedness.
-- SDT conceptualise motivation as a continuum comprising amotivation, extrinsic motivations, and intrinsic motivation.
-- SDT suggest extrinsic motivations differ depending on locus of control.
-- Material and introjected regulation locus is external. Integrated and identified regulation locus is internal.
-- Intrinsic motivation is by definition internal.
-- The more one internalises reasons for externally motivated actions, the more these actions become self-determined.
-- Knowledge sharing behaviour can be explained in terms of TPB/SDT [Gagne 2009]
-- TPB explains how attitudes, norms may influence externally regulated behaviour (extrinsic motivators).
- 
-\emph{Proposition 1A: People with higher levels of autonomous motivation are more likely to share tacit knowledge.}
-
-\emph{Proposition 1B: People with higher levels of autonomous motivation are more likely to seek out tacit knowledge.}
- 
- 
-\section{Brokerage}
- 
-- Define brokerage [ Marsden 1982 ]
-- Brokerage roles [ Gould and Fernandez 1989]
-- Strategic orientations - tertius gaudens [Burt] vs, tertius inungens [Obstfeld]
-- Knowledge is power. Consider brokerage in terms of self-empowerment vs. empowering others [ soda, tortoriello, iorio 2017 ]
-- Brokers in innovation networks
- 
-\emph{Proposition 3: Power in open innovation collaborations can be characterised in terms of brokerage roles.}
- 
-\section{Summary}
- 
-- Large part of managing knowledge flows in open innovation is about creating a climate conducive to knowledge sharing.
-- Cannot coerce people to share knowledge - this is something that must be done through volition.
-- Understanding what motivates people to share and/or broker knowledge is a good first step.
-- TPB and SDT can help with this.
-- Also important to consider knowledge as power.
-- Next section explains how mixed method SNA can be used to assess knowledge sharing/brokerage behaviour and power relations. 
+Clarifying the implications of closed versus disconnected network structures for various organisational outcomes is important to our understanding of network resources \citep{ahuja2000collaboration}. \medskip
