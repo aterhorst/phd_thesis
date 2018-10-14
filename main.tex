@@ -10,6 +10,7 @@
 \usepackage{url}
 \usepackage{enumitem}
 \usepackage{filecontents}
+\usepackage{minted}
 \usepackage{pdflscape}
 \usepackage{epstopdf}
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
@@ -20,6 +21,7 @@
 % \usepackage[document]{ragged2e}
 \usepackage[none]{hyphenat}
 \usepackage[font=small]{caption}
+\usepackage{amsmath}
 \usepackage{longtable}
 \usepackage{siunitx}
 \usepackage{tabularx}
@@ -30,12 +32,14 @@
 \usepackage{multirow}
 \usepackage{pifont}
 \usepackage{tocloft}
+\usepackage{hyphenat}
 \usepackage[justification=centering]{caption}
 \usepackage{textcomp}
 % \usepackage{fixltx2e}
 \usepackage{hyperref}
 \usepackage[flushleft]{threeparttable}
 \usepackage [autostyle, english = american]{csquotes}
+\usepackage{color}
 \MakeOuterQuote{"}
 
 %   \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
@@ -114,7 +118,7 @@ I declare that..
 \chapter{Introduction}
 \input{Chapters/chapter1}
 
-\chapter{A very brief introduction to social network analysis}
+\chapter{Knowledge networks}
 \input{Chapters/chapter2}
 
 \chapter{Motivation, trust, and power}
@@ -123,8 +127,8 @@ I declare that..
 %\chapter{Social networks}
 %\input{chapters/chapter4}
 %
-%\chapter{Research methodology}
-%\input{chapters/chapter5}
+\chapter{Methodology}
+\input{Chapters/chapter4}
 %
 %\chapter{Case overview}
 %\input{chapters/chapter6}
@@ -133,12 +137,12 @@ I declare that..
 \input{Chapters/chapter5}
 
 
+
+\chapter{Case Two - Farm System innovation}
+\input{Chapters/chapter7.tex}
 %
-%\chapter{Case Two - Farm System innovation}
-%\input{chapters/chapter8}
-%
-%\chapter{Case Three - Collaborative Honey Bee Research}
-%\input{chapters/chapter9}
+\chapter{Case Three - Collaborative Honey Bee Research}
+\input{Chapters/chapter8.tex}
 %
 %\chapter{Discussion}
 %\input{chapters/chapter10}
@@ -151,22 +155,17 @@ I declare that..
 
 \bibliography{Qiqqa2BibTexExport}
 
-%\appendix
+\appendix
 
-%\chapter{Survey questionnaire}
-%\input{chapters/appendixa}
-%
-%\chapter{Semi-structured interview questions}
-%\input{chapters/appendixb}
-%
-%\chapter{Formulae for computing centrality measures}
-%\input{chapters/appendixc}
-%
-%\chapter{Qualitative analysis code book}
-%\input{chapters/appendixd}
-%
-%\chapter{R code used in this study}
-%\input{chapters/appendixe}
+\chapter{Survey questionnaire}
+\input{chapters/appendixa}
+
+\chapter{Semi-structured interview questions}
+\input{chapters/appendixb}
+
+\chapter{Qualitative analysis code book}
+\input{chapters/appendixd}
+
 
 
 \end{document}
