@@ -1,5 +1,8 @@
 \documentclass[12pt,twoside]{report}
 \usepackage[utf8]{inputenc}
+
+\usepackage[russian,english]{babel}
+
 \usepackage{graphicx}
 \graphicspath{ {Images/} }
 \usepackage{natbib}
@@ -22,6 +25,7 @@
 \usepackage[none]{hyphenat}
 \usepackage[font=small]{caption}
 \usepackage{amsmath}
+\usepackage{tcolorbox}
 \usepackage{longtable}
 \usepackage{siunitx}
 \usepackage{tabularx}
@@ -157,14 +161,16 @@ I declare that..
 
 \appendix
 
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
 \chapter{Survey questionnaire}
-\input{chapters/appendixa}
+\input{Chapters/appendixa}
 
 \chapter{Semi-structured interview questions}
-\input{chapters/appendixb}
+\input{Chapters/appendixb}
 
 \chapter{Qualitative analysis code book}
-\input{chapters/appendixd}
+\input{Chapters/appendixd}
 
 
 
