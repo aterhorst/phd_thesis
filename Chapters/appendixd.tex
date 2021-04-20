@@ -1,29 +1,45 @@
-% Survey Questions
-
-
-\begin{table}[]
-	\centering
-	\caption{My caption}
-	\label{my-label}
-	\begin{tabular}{@{}llllll@{}}
-		\toprule
-		{\bf \#} & {\bf Section} & {\bf Construct} & {\bf Item} & {\bf Question} & {\bf Responses} \\ \midrule
-		&               &                 &            &                &                 \\
-		&               &                 &            &                &                 \\
-		&               &                 &            &                &                 \\
-		&               &                 &            &                &                 \\
-		&               &                 &            &                &                 \\
-		&               &                 &            &                &                 \\
-		&               &                 &            &                &                 \\
-		&               &                 &            &                &                 \\
-		&               &                 &            &                &                 \\
-		&               &                 &            &                &                 \\
-		&               &                 &            &                &                 \\
-		&               &                 &            &                &                 \\
-		&               &                 &            &                &                 \\
-		&               &                 &            &                &                 \\
-		&               &                 &            &                &                 \\
-		&               &                 &            &                &                 \\
-		&               &                 &            &                &                 \\ \bottomrule
-	\end{tabular}
-\end{table}
+\begin{sidewaystable}[]
+\centering
+\resizebox{0.9\textwidth}{!}{%	
+\begin{threeparttable}
+\footnotesize
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1}
+\caption{R scripts created for this study.}
+\label{tab:r_scripts}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\multicolumn{1}{c}{Script} & \multicolumn{1}{c}{Description} & \multicolumn{1}{c}{Required packages} & \multicolumn{1}{c}{Package author(s)} \\ \midrule
+\multirow[t]{6}{*}{data\_prep.R} & \multirow[t]{6}{*}{Script for ingesting and pre-processing on-line survey data.} & readxl & \citet{wickham2019readxl} \\
+ &  & httr & \citet{wickham2018httr} \\
+ &  & tidyverse & \citet{wickham2017tidyverse} \\
+ &  & ggmap & \citet{kahle2013ggmap} \\
+ &  & geosphere & \citet{hijmans2017geosphere} \\
+ &  & tidygraph & \citet{pedersen2018tidygraph} \\ \\
+\multirow[t]{3}{*}{tidygraph\_to\_mpnet.R} & \multirow[t]{3}{*}{Script for saving pre-processed data as MPNet data files.} & tidyverse & \citet{wickham2017tidyverse} \\
+ &  & tidygraph & \citet{pedersen2018tidygraph} \\
+ &  & MASS & \citet{venables2013modern} \\ \\
+\multirow[t]{2}{*}{ev\_brokerage\_check.R} & \multirow[t]{2}{*}{\makecell[tl]{Script to check that the Everette-Valente brokerage score \\was properly implemented in R.}} & RCurl & \citet{lang2019rcurl} \\ 
+ &  & tidygraph & \citet{pedersen2018tidygraph} \\ \\
+\multirow[t]{4}{*}{gould\_fernandez.R} & \multirow[t]{4}{*}{\makecell[tl]{Script to  perform Gould and Fernandez (1989) broker \\role analysis.}} & tidyverse & \citet{wickham2017tidyverse} \\
+ &  & tidygraph & \citet{pedersen2018tidygraph} \\
+ &  & intergraph & \citet{bojanowski2015intergraph} \\
+ &  & sna & \citet{butts2016package} \\ \\
+\multirow[t]{6}{*}{explore\_data.R} & \multirow[t]{6}{*}{\makecell[tl]{Script for exploratory data analysis (including network \\visualisations).}} & tidyverse & \citet{wickham2017tidyverse} \\
+ &  & ggcorrplot & \citet{kassambara2019ggcorrplot} \\
+ &  & tidygraph & \citet{pedersen2018tidygraph} \\
+ &  & ggraph & \citet{pedersen2018ggraph} \\
+ &  & gridExtra & \citet{auguie2017gridextra} \\
+ &  & ggpubr & \citet{kassambara2019ggpubr} \\ \\
+\multirow[t]{2}{*}{combine\_networks.R} & \multirow[t]{2}{*}{\makecell[tl]{Script for combining knowledge networks and actor \\attributes for all three cases and saving as MPNet data \\files. Useful for cross-case analysis and for model \\parameterisation.}} & tidygraph & \citet{pedersen2018tidygraph} \\
+ &  & MASS & \citet{venables2013modern} \\ \\ \\ \\
+\multirow[t]{5}{*}{text\_analysis.R} & \multirow[t]{5}{*}{\makecell[tl]{Script for performing basic text analysis of interview \\transcripts (term frequency counts, LDA topic modelling, \\word vector analysis).}} & tidyverse & \citet{wickham2017tidyverse} \\
+ &  & tidytext & \citet{silge2016tidytext} \\
+ &  & qdap & \citet{rinker2019qdap} \\
+ &  & ggwordcloud & \citet{pennec2019ggwordcloud} \\
+ &  & ggthemes & \citet{arnold2019ggthemes} \\  \bottomrule
+\end{tabular}
+\end{threeparttable}
+%
+}
+\end{sidewaystable}

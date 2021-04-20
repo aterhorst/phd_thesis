@@ -1,87 +1,17 @@
-\begin{landscape}
-	\renewcommand\thetable{A\arabic{table}} 
-\begin{small}
-\begin{center}
-	\begin{longtable}{c P{2cm} P{3cm} P{3cm} P{7cm} P{3cm} P{3cm}}
-% 	\begin{longtable}{c p{2cm} p{3cm} p{3cm} p{6cm} p{3.5cm} p{3.5cm}}
-		\caption{Self-report survey questions.} \label{tab:self-report} \\
-		\toprule 
-		\multicolumn{1}{c}{Item} & \multicolumn{1}{c}{Theme} & \multicolumn{1}{c}{Construct} & \multicolumn{1}{l}{Scale Name} & \multicolumn{1}{l}{Question} & \multicolumn{1}{l}{Response} & \multicolumn{1}{l}{Reference} \\ \midrule
-		\endfirsthead
-		
-		\multicolumn{7}{c}%
-		{{ \tablename\ \thetable{} -- continued from previous page}} \\ \\
-		\toprule \multicolumn{1}{c}{Item} & \multicolumn{1}{c}{Theme} & \multicolumn{1}{c}{Construct} & \multicolumn{1}{c}{Scale Name} & \multicolumn{1}{c}{Question} & \multicolumn{1}{c}{Response} & \multicolumn{1}{c}{Reference} \\ 
-		\midrule
-		\endhead
-		\midrule
-		\multicolumn{7}{r}{{Continued...}} \\ 
-		\endfoot
-		\bottomrule
-		\endlastfoot
+\begin{table}
+    \centering
+    \begin{tabular}{c}
+    \includegraphics[width = 0.9\textwidth]{Images/SHR_2015_254.pdf}
+    \end{tabular}
+    \label{tab:ethics}
+\end{table}
 
-1 & Introduction & Informed consent & Consent & Welcome to this on-line survey about collaborative innovation. This survey will ask you questions about the collaboration between [list of partner organisations] you are involved in. The survey will take about 20 minutes to complete. Your responses will remain confidential. The results of this study will be used for research purposes,only and will not contain information that will identify you or your organisation. By clicking on the "proceed to next step" button below, you agree to participate in this study and are happy to have your survey responses used as part of this study. & Agree or disagree. & \\
-2 & Demographics & Homophily & Age & Please enter your age in years. & Enter number. & \\
-3 & Demographics & Homophily & Gender & Please state your gender. & Select male, female, or other & \\
-4 & Demographics & Propinquity & Job location & Please state the postcode of your place of work. Enter more than one postcode, separated by commas, if you work at multiple sites. & Enter postcode(s). & \\
-5 & Demographics & Homophily & Education & Please state your highest level of education. & Choose one from 8 levels as specified in ASCED. & \citet{trewin2000australian} \\
-6 & Demographics & Homophily & Field of education & Please state your most recent field of education. & Choose one from 12 fields as specified in ASCED. & \citet{trewin2000australian} \\
-7 & Demographics & Homophily & Occupation & Please state your current occupation. & Choose one from 43 sub-major occupations as specified in ANZSCO. & \citet{pink2009anzsco} \\
-8 & Demographics & Homophily & Experience & Please enter the number of years you have worked in your current occupation. & Enter number. & \\
-9 & Demographics & Homophily & Tenure & Please enter the number of years you have worked for your current employer. & Enter number. & \\
-10 & Demographics & Role & Role description & Please describe your main role in this collaboration (e.g. executive oversight, financial control, consultant, technical specialist, project management, testing/evaluation, commercialisation ...). & Type in role description. & \\
-11 & Relationships & Name generator & Knowledge sharing & Name people who provide you with useful knowledge that helps you accomplish your tasks in this collaboration. & Select names from roster of names and/or add name(s) & \\
-12 & Relationships & Name interpreter & Tacit knowledge & How much of the knowledge provided by this person is documented (e.g. technical report, research publication, manual …)? & Rate amount on a 10-point scale (reverse scored). & \citet{cavusgil2003tacit} \\
-13 & Relationships & Name interpreter & Tacit knowledge & How complex is the knowledge provided by this person? & Rate amount on a 10-point scale. & \citet{cavusgil2003tacit} \\
-14 & Relationships & Name interpreter & Tacit knowledge & How much time does this person spend demonstrating their knowledge to me? & Rate amount on a 10-point scale. & \citet{cavusgil2003tacit} \\
-15 & Relationships & Name generator & Idea generation & Name people who help you come up with new ideas or novel solutions to hard problems in this collaboration. Click on relevant names listed below. You can add names of people who are involved in the collaboration but do not appear on this list. You may skip this section if nobody comes to mind. & Select names from roster of names and/or add name(s) & \\
-16 & Relationships & Name generator & Idea realisation & Name people who help you transform ideas into product, process or service concepts for further development and commercialisation in this collaboration. Click on relevant names listed below. You can add names of people who are involved in the collaboration but do not appear on this list. You may skip this section if nobody comes to mind. & Select names from roster of names and/or add name(s) & \\
-17 & Relationships & Name generator & Affect-based trust & Name people in the collaboration you can share ideas, feelings and hopes with. These are people with whom you have made a considerable emotional investment in your working relationship. You can talk freely with them about the difficulties you are having at work. They will listen and respond in a constructive, caring way. You would share a sense of loss with them if you could no longer work together. Click on relevant names listed below. You can add names of people who are involved in the collaboration but do not appear on this list. You may skip this section if nobody comes to mind. & Select names from roster of names and/or add name(s) & \citet{mcallister1995affect} \\
-18 & Relationships & Name generator & Cognition-based trust & Name people in the collaboration you consider professional, competent, and dedicated. You can count on them not to make your job harder by careless work. They have the trust and respect of their colleagues, including those who are not friends. Click on relevant names listed below. You can add names of people who are involved in the collaboration but do not appear on this list. You may skip this section if nobody comes to mind. & Select names from roster of names and/or add name(s) & \citet{mcallister1995affect} \\
-19 & Relationships & Name generator & Managers & Name people you formally report to in this collaboration. Click on relevant names listed below. You can add names of people who are involved in the collaboration but do not appear on this list. You may skip this section if nobody comes to mind. & Select names from roster of names and/or add name(s) & \\
-20 & Relationships & Name generator & Prior relationships & Name people in this collaboration you have worked and interacted with prior to this collaboration getting underway. Click on relevant names listed below. You may skip this section if nobody comes to mind. & Select names from roster of names. & \\
-21 & Attitude & Personality & Openness1 & I see myself as someone who has an active imagination. & Rate agreement on a 10-point scale. & \citet{rammstedt2007measuring} \\
-22 & Attitude & Personality & Openness2 to experience & I see myself as someone who has few artistic interests. & Rate agreement on a 10-point scale (reverse scored). & \citet{rammstedt2007measuring} \\
-23 & Attitude & Personality & Conscientiousness1 & I see myself as someone who tends to be lazy. & Rate agreement on a 10-point scale (reverse scored). & \citet{rammstedt2007measuring} \\
-24 & Attitude & Personality & Conscientiousness2 & I see myself as someone who does a thorough job. & Rate agreement on a 10-point scale. & \citet{rammstedt2007measuring} \\
-25 & Attitude & Personality & Agreeableness1 & I see myself as someone who is generally trusting. & Rate agreement on a 10-point scale. & \citet{rammstedt2007measuring} \\
-26 & Attitude & Personality & Agreeableness2 & I see myself as someone who tends to find fault with others. & Rate agreement on a 10-point scale (reverse scored). & \citet{rammstedt2007measuring} \\
-27 & Attitude & Self-efficacy & Competence1 & I am confident about my ability to do my job in this collaboration. & Rate agreement on a 10-point scale. & \citet{spreitzer1995psychological} \\
-28 & Attitude & Self-efficacy & Competence2 & I am self-assured about my capabilities to perform my work in this collaboration. & Rate agreement on a 10-point scale. & \citet{spreitzer1995psychological} \\
-29 & Attitude & Self-efficacy & Competence3 & I have mastered the skills necessary for my job in this collaboration. & Rate agreement on a 10-point scale. & \citet{spreitzer1995psychological} \\
-30 & Attitude & Self-efficacy & SelfDetermination1 & I have significant autonomy in determining how I do my job in this collaboration. & Rate agreement on a 10-point scale. & \citet{spreitzer1995psychological} \\
-31 & Attitude & Self-efficacy & SelfDetermination2 & I can decide on my own how to go about doing my work in this collaboration. & Rate agreement on a 10-point scale. & \citet{spreitzer1995psychological} \\
-32 & Attitude & Self-efficacy & SelfDetermination3 & I have considerable opportunity for independence and freedom in how I do my job in this collaboration. & Rate agreement on a 10-point scale. & \citet{spreitzer1995psychological} \\
-33 & Attitude & Self-efficacy & Creativity1 & I feel that I am good at generating novel ideas in this collaboration. & Rate agreement on a 10-point scale. & \citet{tierney2002creative} \\
-34 & Attitude & Self-efficacy & Creativity2 & I have confidence in my ability to solve problems creatively. & Rate agreement on a 10-point scale. & \citet{tierney2002creative} \\
-35 & Attitude & Self-efficacy & Creativity3 & I am good at further developing the ideas of others in this collaboration. & Rate agreement on a 10-point scale. & \citet{tierney2002creative} \\
-36 & Attitude & Self-efficacy & Creativity4 & I am good at finding creative ways to solve problems. & Rate agreement on a 10-point scale. & \citet{tierney2002creative} \\
-37 & Attitude & Social identity & IdentificationOrg & When someone criticises my company or organisation, it feels like a personal insult. & Rate agreement on a 10-point scale. & \citet{mael1992alumni} \\
-38 & Attitude & Social identity & IdentificationGroup & When someone criticises my work-group, it feels like a personal insult. & Rate agreement on a 10-point scale. & \citet{mael1992alumni} \\
-39 & Attitude & Social identity & IdentificationCollab & When someone criticises the collaboration, it feels like a personal insult. & Rate agreement on a 10-point scale. & \citet{mael1992alumni} \\
-40 & Attitude & Work motivation & Amotivation1 & I don’t put effort into this collaboration because I feel I am wasting my time. & Rate agreement on a 10-point scale. & \citet{gagne2015multidimensional} \\
-41 & Attitude & Work motivation & Amotivation2 & I do little in this collaboration because I don’t think it is worth the effort. & Rate agreement on a 10-point scale. & \citet{gagne2015multidimensional} \\
-42 & Attitude & Work motivation & Amotivation3 & I don’t know why I’m in this collaboration, it’s pointless. & Rate agreement on a 10-point scale. & \citet{gagne2015multidimensional} \\
-43 & Attitude & Work motivation & ExtrinsicRegulationSocial1 & I put effort into this collaboration to get approval from others (e.g. supervisor, work colleagues, collaboration partners, community of practice …). & Rate agreement on a 10-point scale. & \citet{gagne2015multidimensional} \\
-44 & Attitude & Work motivation & ExtrinsicRegulationSocial2 & I put effort into this collaboration because others will respect me more (e.g. supervisor, work colleagues, collaboration partners, community of practice …). & Rate agreement on a 10-point scale. & \citet{gagne2015multidimensional} \\
-45 & Attitude & Work motivation & ExtrinsicRegulationSocial3 & I put effort into this collaboration to avoid being criticised by others (e.g. supervisor, work colleagues, collaboration partners, community of practice …). & Rate agreement on a 10-point scale. & \citet{gagne2015multidimensional} \\
-46 & Attitude & Work motivation & ExtrinsicRegulationMaterial1 & I put effort into this collaboration only because others will reward me financially if I put enough effort into it. & Rate agreement on a 10-point scale. & \citet{gagne2015multidimensional} \\
-47 & Attitude & Work motivation & ExtrinsicRegulationMaterial2 & I put effort into this collaboration only because I will have greater job security if I put enough effort into it. & Rate agreement on a 10-point scale. & \citet{gagne2015multidimensional} \\
-48 & Attitude & Work motivation & ExtrinsicRegulationMaterial3 & I put effort into this collaboration because I risk losing my job if I don’t. & Rate agreement on a 10-point scale. & \citet{gagne2015multidimensional} \\
-49 & Attitude & Work motivation & IntrojectedRegulation1 & I put effort into this collaboration because I have to prove to myself that I can. & Rate agreement on a 10-point scale. & \citet{gagne2015multidimensional} \\
-50 & Attitude & Work motivation & IntrojectedRegulation2 & I put effort into this collaboration because it makes me feel proud of myself. & Rate agreement on a 10-point scale. & \citet{gagne2015multidimensional} \\
-51 & Attitude & Work motivation & IntrojectedRegulation3 & I put effort into this collaboration because otherwise I will feel ashamed of myself. & Rate agreement on a 10-point scale. & \citet{gagne2015multidimensional} \\
-52 & Attitude & Work motivation & IntrojectedRegulation4 & I put effort into this collaboration because otherwise I will feel bad about myself. & Rate agreement on a 10-point scale. & \citet{gagne2015multidimensional} \\
-53 & Attitude & Work motivation & IdentifiedRegulation1 & I put effort into this collaboration because I personally consider it important to do so. & Rate agreement on a 10-point scale. & \citet{gagne2015multidimensional} \\
-54 & Attitude & Work motivation & IdentifiedRegulation2 & I put effort into this collaboration because it aligns with my personal values. & Rate agreement on a 10-point scale. & \citet{gagne2015multidimensional} \\
-55 & Attitude & Work motivation & IdentifiedRegulation3 & I put effort into this collaboration because it has personal significance for me. & Rate agreement on a 10-point scale. & \citet{gagne2015multidimensional} \\
-56 & Attitude & Work motivation & IntrinsicMotivation1 & I put effort into this collaboration because the work I do is fun. & Rate agreement on a 10-point scale. & \citet{gagne2015multidimensional} \\
-57 & Attitude & Work motivation & IntrinsicMotivation2 & I put effort into this collaboration because the work I do is exciting. & Rate agreement on a 10-point scale. & \citet{gagne2015multidimensional} \\
-58 & Attitude & Work motivation & IntrinsicMotivation3 & I put effort into this collaboration because the work I do is interesting. & Rate agreement on a 10-point scale. & \citet{gagne2015multidimensional} \\
-59 & Closure & Thank you & & Many thanks for completing the survey. Your response has been recorded and you can close the browser window. If you would like to change your response just click on the link to this survey contained in the email sent to you. & & \\ 
+\newpage
 
-\end{longtable}
-\end{center}
-\end{small}
-\end{landscape}
- 
+\begin{table}
+    \centering
+    \begin{tabular}{c}
+    \includegraphics[width = 0.9\textwidth]{Images/SHR_2015_254_ACK.pdf}
+    \end{tabular}
+\end{table}
+    

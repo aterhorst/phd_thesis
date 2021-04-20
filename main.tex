@@ -1,13 +1,25 @@
-\documentclass[12pt,twoside]{report}
-\usepackage[utf8]{inputenc}
-
-\usepackage[russian,english]{babel}
-
+\documentclass[12pt,table]{book}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage{fancyhdr}   
+\usepackage{lipsum}
+\usepackage{pbox}
+\usepackage{dcolumn}
 \usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{etoolbox}
+\usepackage{pgf}
+\usepackage{subcaption}
+\usepackage{mwe}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
 \graphicspath{ {Images/} }
+\usepackage[nodayofweek]{datetime}
 \usepackage{natbib}
-\usepackage[sectionbib]{chapterbib}
-\bibliographystyle{dcu}
+\usepackage{highlight}
+\bibliographystyle{agsm}
+\usepackage[normalem]{ulem} 
+% \usepackage[sectionbib]{chapterbib}
+% \bibliographystyle{agsm}
 \setcitestyle{authoryear,open={(},close={)}}
 \usepackage{setspace}
 \usepackage{url}
@@ -15,109 +27,181 @@
 \usepackage{filecontents}
 \usepackage{minted}
 \usepackage{pdflscape}
-\usepackage{epstopdf}
-\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
-\usepackage[english]{babel}
 \usepackage[nottoc,notlof,notlot]{tocbibind} 
 \usepackage{booktabs}
 \usepackage{microtype}
-% \usepackage[document]{ragged2e}
-\usepackage[none]{hyphenat}
+\usepackage[document]{ragged2e}
 \usepackage[font=small]{caption}
 \usepackage{amsmath}
 \usepackage{tcolorbox}
+\usepackage{tabu}
 \usepackage{longtable}
 \usepackage{siunitx}
 \usepackage{tabularx}
+\usepackage{supertabular}
 \usepackage{subcaption}
 \usepackage{lscape}
+\usepackage{float}
+%\usepackage{subfig}
 \usepackage{adjustbox}
+\usepackage{rotating}
 \usepackage{array}
 \usepackage{multirow}
 \usepackage{pifont}
 \usepackage{tocloft}
-\usepackage{hyphenat}
 \usepackage[justification=centering]{caption}
 \usepackage{textcomp}
-% \usepackage{fixltx2e}
+\usepackage{makecell}
+\usepackage{cleveref}
 \usepackage{hyperref}
+\usepackage[none]{hyphenat}
 \usepackage[flushleft]{threeparttable}
 \usepackage [autostyle, english = american]{csquotes}
 \usepackage{color}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
 \MakeOuterQuote{"}
+\captionsetup{singlelinecheck=false}
+\newcommand*\rot{\multicolumn{1}{R{90}{1em}}}
 
-%   \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
-\raggedbottom
-
-\newcolumntype{R}[2]{%
-	>{\adjustbox{angle=#1,lap=\width-(#2)}\bgroup}%
-	l%
-	<{\egroup}%
-}
-
-\newcommand*\rot{\multicolumn{1}{R{90}{1em}}}% no optional argument here, please!
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 
 \nocite{*} 
 \renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
 
+\setlength{\arrayrulewidth}{1mm}
+\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{1.5}
 
+\setcounter{secnumdepth}{3}
 
+% make neat dates
+\renewcommand{\today}{\the\day \ \monthname \ \the\year}
 
-%\usepackage{fancyhdr}
-%\pagestyle{fancy}
-%
-%\fancypagestyle{plain}{%
-%	\fancyhf{} % clear all header and footer fields
-%	\fancyfoot[C]{\bfseries \thepage} % except the center
-%	\renewcommand{\headrulewidth}{0pt}
-%	\renewcommand{\footrulewidth}{0pt}}
-%
-%\fancypagestyle{plain}{}
-%\fancyhf{}
-%\fancyhead[LE,RO]{Andrew Terhorst}
-%\fancyhead[RE,LO]{How social networks shape absorptive capacity}
-%\fancyfoot[CE,CO]{\rightmark}
-%\fancyfoot[LE,RO]{\thepage}
+% remove headers from book class
+\fancyhf{}
+\renewcommand\headrulewidth{0pt}
+\fancyfoot[C]{\thepage}
+\pagestyle{fancy}
 
-%\renewcommand{\headrulewidth}{2pt}
-%\renewcommand{\footrulewidth}{1pt}
-
-
-
-
-
-\title{
-	{The Tacit Dimension of Open Innovation}\\
-	{\large Swinburne University of Technology}\\
-	{\includegraphics[width=0.3\columnwidth]{swinburne_university_of_technology.png}}
-}
-\author{Andrew Terhorst}
-\date{\today}
-
-\begin{document}
-
-\onehalfspacing
-\maketitle
 \renewcommand{\bibname}{References}
 
- 
 
+\begin{document}
+\frontmatter
+
+\begin{titlepage}
+\renewcommand{\today}{\monthname \ \the\year}
+\begin{center}
+\vspace*{1cm}
+
+\Huge
+\textbf{The Tacit Dimension of Open Innovation}\\
+\vspace{1cm}
+
+\Large
+\textbf{Andrew Terhorst}
+\vfill
+
+\Large
+A thesis submitted in total fulfilment\\
+of the requirements for the Degree of \\
+Doctor of Philosophy
+
+\vspace{1cm}
+
+\includegraphics[width=0.5\textwidth]{Images/swinburne_university_of_technology.png} 
+
+\vspace{1cm}
+
+\Large
+Centre for Transformative Innovation\\
+Faculty of Business and Law\\
+\today
+\end{center}
+\end{titlepage}
+
+\doublespacing
+
+\addcontentsline{toc}{chapter}{Abstract}
 \chapter*{Abstract}
 
-Abstract goes here
+This thesis investigates better ways to manage tacit knowledge in open innovation. Business enterprises need to engage in continuous innovation to remain competitive in an increasingly demanding economy. Many business enterprises are turning to open innovation to address this challenge. Open innovation is a "distributed innovation process based on purposefully managed knowledge flows in line with the firm's business model" \citep{chesbrough2014explicating}. Tacit knowledge plays a crucial role in innovation. Such knowledge guides the thought processes that leads to novel ideas. This study of open innovation emphasises the interaction between different ways of knowing in knowledge exchange rather than managing knowledge flows. \medskip
 
+\noindent
+Open innovation partnerships are treated as a temporary knowledge network deliberately set up to achieve a specific innovation outcome. Knowledge is a latent resource and only becomes valuable when applied in practice, usually a socially intensive process. A network perspective allows one to use social network analysis to examine the socialisation of knowledge in open innovation partnerships and assess how this is affected by absorptive capacity and skilled brokerage. \medskip
+
+\noindent 
+A combination of quantitative and qualitative methods is needed to understand the social mechanisms affecting tacit knowledge sharing in open innovation. Three open innovation partnerships were assessed in this study. Exponential random graph models (ERGMs) and semi-structured interviews were used to examine the microfoundations of tacit and explicit knowledge networks in each partnership from a critical realist perspective. Critical realism allows for the combination of qualitative and quantitative methods using deductive and retroductive reasoning. One set of ERGM models tested propositions about the role of motivation, trust, and power in explicit and tacit knowledge networks, while another set of ERGM models examined the mix of broker roles in explicit and tacit knowledge networks. The semi-structured interviews provided additional insight to support the interpretation of modelling results. \medskip
+
+\noindent 
+Results from the first set of ERGM models underscored the importance of tacit knowledge in open innovation. Path closure in a social network reflects a human tendency to form groups. Two of the partnerships had a significant path closure in their tacit knowledge networks. No such effect is evident in the explicit knowledge networks. Tacit knowledge features strongly in group work. A significant receiver effect for autonomous motivation in each partnership's tacit knowledge network indicates that autonomous motivation is a reliable predictor of learning intent or knowledge-seeking behaviour. The second set of model runs indicate that path closure and broker roles can account for virtually all of the observed network configurations. Path closure and brokerage are the dominant social processes in all three open innovation partnerships. \medskip
+
+\noindent 
+Analysis of semi-structured interviews provided a deeper understanding of how agency and structure affect tacit knowledge sharing in open innovation. Results indicate that tacit knowledge is often under-valued, which can impact negatively on problem-solving and innovation. Brokers can have a profound effect on the application of knowledge in practice. Partnerships dominated by one individual evidenced tension, attributed to the fact that some partners are wary of a highly central actor dominating the discourse. Trust features strongly in most decisions to share tacit knowledge. Perceived acts of self-interest erode trust and contribute to partner tension. People are less likely to disclose their hard-earned tacit knowledge in low-trust situations. \medskip
+
+\noindent 
+Practical contributions of the research include evidence that firms wishing to pursue open innovation need to appreciate the importance of tacit knowledge for innovation. Managers who foster appropriate cultures to support the autonomous motivation of individuals can expect more positive knowledge-sharing behaviours. Promoting the interaction between different ways of knowing through skilled brokerage and trust-building also appears to have positive impact. Neglecting the tacit dimension of open innovation may result in sub-optimal, or even worse, failed innovation outcomes. Skilled brokerage is especially crucial in the early stages of an open innovation project. Not only is it essential for creating an environment that is conducive for problem-solving, but it also builds the absorptive capacity needed to deal with increasingly complex and sticky knowledge. Essentially, the task of the manager is to strengthen ties that are initially weak in their knowledge networks so that knowledge is exchanged, new knowledge is created, and things get done. \medskip
+
+\noindent
+Few guidelines exist for doing mixed-method social network analysis. Another contribution of this study will be the development and testing of a more robust framework for mixed-method social network analysis that can be applied in other contexts.
+
+\addcontentsline{toc}{chapter}{Dedication}
 \chapter*{Dedication}
-To mum and dad
 
+This study is dedicated to my late parents. Without their support, I would never have been able to afford to go to university and pursue an interesting career in research and development. I am sad they are not around to see me graduate as a doctor of philosophy. They would have been proud, I am sure.
+
+\addcontentsline{toc}{chapter}{Declaration}
 \chapter*{Declaration}
-I declare that..
 
+This doctoral thesis:
 
+\begin{enumerate}
+    \item Contains no material which has been accepted for the award to the candidate of any other degree or diploma, except where due reference is made in the text of the examinable outcome.
+    \item To the best of the candidate’s knowledge contains no materials previously published or written by another person expect where due reference is made in the test of the examinable outcome.
+    \item Where the work is based on joint research or publications, discloses the relative contributions of the respective workers or authors.
+\end{enumerate} \bigskip
+
+\includegraphics[width = 0.5\textwidth]{Images/Signature.png}\\
+Andrew Terhorst\\
+\shortdate{\today}
+
+\addcontentsline{toc}{chapter}{Acknowledgements}
 \chapter*{Acknowledgements}
 
+This study was funded by the Commonwealth Scientific and Industrial Research Organisation (CSIRO) as part of its contribution to the Australian Research Council's Pathways to Market Industrial Transformation Hub hosted by the University of Tasmania. \medskip
+
+\noindent
+The author wishes to acknowledge the CSIRO for their extraordinary support and encouragement to get the job done. He also thanks his supervisors, Professor Dean Lusher, Associate Professor Dianne Bolton, Dr. Ian Elsum and Dr. Peng Wang. Without their input, this thesis would never have been completed. The author also wants to acknowledge fellow doctoral candidates, Bopha Roden and Sarah King, for their friendship and support. Last but not least, the author thanks the Swinburne University of Technology Higher Degree Research office for helping him navigate the rules and procedures of doctoral studies.  
+
+\addcontentsline{toc}{chapter}{Foreword}
+\chapter*{Foreword}
+
+One must demonstrate a capacity for independent, critical thinking in a doctoral thesis. Examiners want to see evidence of originality and be presented with logical arguments. They do not want to see careless mistakes that indicate sloppy research \citep{mullins2002its}. My goal in writing this thesis was to present a rigorous and coherent analysis of tacit knowledge sharing in open innovation. It was clear early on that I would need a combination of quantitative and qualitative analysis to address all of my research questions. I learnt that reconciling different ontological and epistemological assumptions can be quite problematic in mixed-method research. This led me to embrace critical realism as my research philosophy. It allows one to consider reality in terms of observed or  measured reality, perceived or unmeasured reality, and actual reality \citep{bhaskar2013realist}. Unpacking these different realities using deductive, inductive and retroductive reasoning has been eye-opening and confidence-building. \medskip
+
+I knew very little about social network analysis at the beginning of my doctoral studies. Because social network analysis is data-intensive, I decided to learn how to program in \texttt{R} to become more proficient at data manipulation. I completed online data science courses offered by John Hopkins University (USA), namely \enquote{Computing for Data Analysis}, \enquote{Getting and Cleaning Data}, \enquote{Exploratory Data Analysis}, and \enquote{The Data Scientist's Toolbox}. Each course took 4 weeks to complete. Having mastered basic \texttt{R} programming, I then did an 8-week online course entitled \enquote{Social Network Analysis} offered by the University of Michigan (USA). This course provided an excellent foundation in social network analysis. To cap things off, I attended a 5-day \enquote{Introduction to Social Network Analysis} course offered by Swinburne University of Technology. This course introduced me to exponential random graph models. I now consider myself a competent social network analyst. \medskip
+
+I did not appreciate how much thought has to go into designing an online survey questionnaire until I completed an online course entitled \enquote{Questionnaire Design for Social Surveys} offered by the University of Maryland (USA). This 4-week course taught me about formulating short and unambiguous questions, avoiding responder fatigue, managing selective recall, and piloting surveys. One component of the course addressed interviewing skills. This component prompted me to explore further the theory and practice of successful interview techniques \citep[e.g.][]{kvale2008doing,seidman2012interviewing}. Coding interview transcripts was particularly challenging for me. Everybody I spoke to approached coding differently. As \citet{saldana2015coding} notes, there is no right or wrong way to go about coding. After many false starts, I managed to find a way to code that worked for me. I still have much to learn about qualitative analysis but think I managed to balance my thesis's quantitative and qualitative paradigms. Academic writing does not come easily to me. Early criticism of my writing was keenly felt. I only started to relax when it dawned upon me that I was becoming a \enquote{subject matter expert} and could communicate with authority. \medskip
+
+There is no doubt that I learned much about open innovation through my research. I discovered the importance of tacit knowledge for problem-solving and now understand how tacit knowledge defines who we are, and what this means in terms of power and trust relations. More importantly, I recognise the importance of skilled brokerage to facilitate tacit knowledge flows in open innovation. 
+
+\newpage
+\setcounter{tocdepth}{3}
 \tableofcontents
 
-\chapter*{Preface}
+\newpage
+
+\listoffigures
+
+\newpage
+
+\listoftables
+
+\mainmatter
 
 \chapter{Introduction}
 \input{Chapters/chapter1}
@@ -127,51 +211,54 @@ I declare that..
 
 \chapter{Motivation, trust, and power}
 \input{Chapters/chapter3}
-%
-%\chapter{Social networks}
-%\input{chapters/chapter4}
-%
+
 \chapter{Methodology}
 \input{Chapters/chapter4}
-%
-%\chapter{Case overview}
-%\input{chapters/chapter6}
-%
+
 \chapter{Case descriptions}
 \input{Chapters/chapter5}
 
-
-
-\chapter{Case Two - Farm System innovation}
-\input{Chapters/chapter7.tex}
+\chapter{Modelling results}
+\input{Chapters/chapter6}
 %
-\chapter{Case Three - Collaborative Honey Bee Research}
-\input{Chapters/chapter8.tex}
+\chapter{Qualitative results}
+\input{Chapters/chapter7}
 %
-%\chapter{Discussion}
-%\input{chapters/chapter10}
+\chapter{Discussion}
+\input{Chapters/chapter8}
 %
-%\chapter{Summary and conclusions}
+\chapter{Summary and conclusions}
+\input{Chapters/chapter9}
 
-
+\backmatter
 \pagebreak
 
-
+%\addcontentsline{toc}{section}{References}
+% \section*{References}
+% \settocbibname{References}
+% \bibliographystyle{agsm}
+\renewcommand{\bibname}{References}
 \bibliography{Qiqqa2BibTexExport}
+%\bibliography{jabref.bib}
 
 \appendix
+\singlespacing
 
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 
-\chapter{Survey questionnaire}
+\chapter{Ethics clearance}
 \input{Chapters/appendixa}
 
-\chapter{Semi-structured interview questions}
+\chapter{Survey questionnaire}
 \input{Chapters/appendixb}
 
-\chapter{Qualitative analysis code book}
+\chapter{Semi-structured interview questions}
+\input{Chapters/appendixc}
+
+\chapter{R scripts created for this study}
 \input{Chapters/appendixd}
 
-
+\chapter{Qualitative analysis code book}
+\input{Chapters/appendixe}
 
 \end{document}
