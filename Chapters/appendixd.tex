@@ -1,50 +1,50 @@
+\onehalfspacing
+An ERGM represents a probability distribution of graphs for a given set, where the probability of observing a graph is dependent on the presence of the various network configurations expressed by the model. Importantly, the unit of analysis in an ERGM is not the number of nodes, but the number of possible ties between all actors in the network ($n(n-1)$). For a binary network, the probability of observing specific network configurations for a given set of actors \(n\) can be expressed as follows: $$ P(X = x) = \frac{\exp \left \{ \theta'z(x)  \right \}}{\kappa (\theta )} $$ where $P(x)$ indicates the probability of a given network, $\theta$ indicates a vector of model parameters, $z(x)$ is a vector of network statistics, and $\kappa$ is a normalising function to ensure a proper probability distribution across a set of random networks \citep{shumate2010exponential}. \medskip 
+
+Network statistics $z(x)$ are counts of the estimated number of configurations in the network, or some function of those counts. The probability of the network depends on how many of those configurations are present and the parameters indicate the importance of each configuration \citep{lusher2013exponential}. Large positive parameters suggest that more configurations of that type are observed in the network than expected by chance alone \citep{robins2009closure}. The following table lists the model parameters used in this thesis and their corresponding network statistic ($z$): \medskip
+
 \begin{sidewaystable}[]
-\renewcommand\thetable{A\arabic{table}} 
 \centering
+\caption[Network statistics used in this thesis]{Network statistics used in this thesis*.}
+\label{tab:ergm_stats}
+\fontdimen16\textfont2=3pt
+\fontdimen17\textfont2=3pt
 \resizebox{0.9\textwidth}{!}{%	
 \begin{threeparttable}
-\footnotesize
-\setlength{\tabcolsep}{6pt}
-\renewcommand{\arraystretch}{1}
-\caption[R scripts created for this study]{R scripts created for this study*.}
-\label{tab:r_scripts}
-\begin{tabular}{@{}llll@{}}
+\begin{tabular}{l c l l}
 \toprule
-\multicolumn{1}{c}{Script} & \multicolumn{1}{c}{Description} & \multicolumn{1}{c}{Required packages} & \multicolumn{1}{c}{Package author(s)} \\ \midrule
-\multirow[t]{6}{*}{data\_prep.R} & \multirow[t]{6}{*}{Script for ingesting and pre-processing on-line survey data.} & readxl & \citet{wickham2019readxl} \\
- &  & httr & \citet{wickham2018httr} \\
- &  & tidyverse & \citet{wickham2017tidyverse} \\
- &  & ggmap & \citet{kahle2013ggmap} \\
- &  & geosphere & \citet{hijmans2017geosphere} \\
- &  & tidygraph & \citet{pedersen2018tidygraph} \\ \\
-\multirow[t]{3}{*}{tidygraph\_to\_mpnet.R} & \multirow[t]{3}{*}{Script for saving pre-processed data as MPNet data files.} & tidyverse & \citet{wickham2017tidyverse} \\
- &  & tidygraph & \citet{pedersen2018tidygraph} \\
- &  & MASS & \citet{venables2013modern} \\ \\
-\multirow[t]{2}{*}{ev\_brokerage\_check.R} & \multirow[t]{2}{*}{\makecell[tl]{Script to check that the Everette-Valente brokerage score \\was properly implemented in R.}} & RCurl & \citet{lang2019rcurl} \\ 
- &  & tidygraph & \citet{pedersen2018tidygraph} \\ \\
-\multirow[t]{4}{*}{gould\_fernandez.R} & \multirow[t]{4}{*}{\makecell[tl]{Script to  perform Gould and Fernandez (1989) broker \\role analysis.}} & tidyverse & \citet{wickham2017tidyverse} \\
- &  & tidygraph & \citet{pedersen2018tidygraph} \\
- &  & intergraph & \citet{bojanowski2015intergraph} \\
- &  & sna & \citet{butts2016sna} \\ \\
-\multirow[t]{6}{*}{explore\_data.R} & \multirow[t]{6}{*}{\makecell[tl]{Script for exploratory data analysis (including network \\visualisations).}} & tidyverse & \citet{wickham2017tidyverse} \\
- &  & ggcorrplot & \citet{kassambara2019ggcorrplot} \\
- &  & tidygraph & \citet{pedersen2018tidygraph} \\
- &  & ggraph & \citet{pedersen2019ggraph} \\
- &  & gridExtra & \citet{auguie2017gridextra} \\
- &  & ggpubr & \citet{kassambara2019ggpubr} \\ \\
-\multirow[t]{2}{*}{combine\_networks.R} & \multirow[t]{2}{*}{\makecell[tl]{Script for combining knowledge networks and actor \\attributes for all three cases and saving as MPNet data \\files. Useful for cross-case analysis and for model \\parameterisation.}} & tidygraph & \citet{pedersen2018tidygraph} \\
- &  & MASS & \citet{venables2013modern} \\ \\ \\ \\
-\multirow[t]{5}{*}{extract\_nvivo\_codes.R} & \multirow[t]{5}{*}{\makecell[tl]{Script for tabulating the top NVivo codes for each \\case.}} & tidyverse & \citet{wickham2017tidyverse} \\
- &  & readxl & \citet{wickham2019readxl} \\
- &  & xtable & \citet{dahl2019xtable} \\  \bottomrule
+Parameter & Graphic & Statistic & Dependences \\ \midrule
+Arc (edge) & \begin{minipage}{.12\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/Arc} \end{minipage} & $z_{L} = \sum_{i = 1}^N \sum_{j = 1}^N X_{ij}$ & \\
+Reciprocity (mutuality) & \begin{minipage}{.12\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/Reciprocity} \end{minipage} & $z_{\mathit{Reciprocity}} = \sum_{i = 1}^N \sum_{j = 1}^N X_{ij} X_{ji}$ & \\
+TwoPath (simple connectivity) & \begin{minipage}{.12\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/TwoPath} \end{minipage} & $z_{2P} = \sum_{i \neq j \neq k}^N X_{ij} X_{jk} $ & \\
+AinS (popularity spread) & \begin{minipage}{.12\textwidth} \centering \includegraphics[width=0.6\linewidth]{Images/AinS} \end{minipage} & $z_{AinS} = \sum_{i = 1}^{N-1} \bigg(-1 \bigg)^k \frac{S_k^{in}}{\lambda^{k-2}} $ & \\
+AoutS (activity spread) & \begin{minipage}{.12\textwidth} \centering \includegraphics[width=0.6\linewidth]{Images/AoutS} \end{minipage} & $z_{AoutS} = \sum_{i = 1}^{N - 1} \bigg(-1\bigg)^k \frac{S^{Out}_k}{\lambda^{k-2}}$  & \\
+AT-T (path closure) & \begin{minipage}{.12\textwidth} \centering \includegraphics[width=0.6\linewidth]{Images/AT-T} \end{minipage} & $z_{AT-T} = \lambda \sum_{i = 1}^N \sum_{j = 1}^N X_{ij} \bigg[1- \bigg(1 - \frac{1}{\lambda}\bigg)^{L_2(i,j)}\bigg]$ & $L_2(i,j) = \sum_{h = 1}^N X_{ih} X_{hj}$ \\
+A2P (multiple connectivity) & \begin{minipage}{.12\textwidth} \centering \includegraphics[width=0.6\linewidth]{Images/A2P} \end{minipage} & $z_{A2P-T} = \lambda \sum_{i < j}^N  \bigg[1- \bigg(1 - \frac{1}{\lambda}\bigg)^{L_2(i,j)}\bigg]$ & \\
+Attribute sender & \begin{minipage}{.12\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/Sender} \end{minipage} & $z_{Sender} = \sum_{ij} u_i X_{ij}$ & \\
+Attribute receiver & \begin{minipage}{.12\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/Receiver} \end{minipage} &  $z_{Receiver} = \sum_{ij} u_j X_{ij}$ & \\
+Attribute difference & \begin{minipage}{.12\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/Difference} \end{minipage} & $z_{\mathit{Difference}} = \sum_{ij} | u_i - u_j| X_{ij}$ & \\
+Attribute match & \begin{minipage}{.12\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/Match} \end{minipage} & $z_{Match} = \sum_{i,j} \delta_{c_i, c_j} X_{ij}$ & {\[
+\delta_{c_i, c_j} =
+\begin{cases}
+0 & \text{if  } c_i \neq c_j, \\
+1 & \text{if  } c_i = c_j. \\
+\end{cases}
+\]} \\
+Attribute mismatch reciprocity & \begin{minipage}{.12\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/MisMatchReciprocity} \end{minipage} & $z_{\mathit{Mismatch\ reciprocity}} = \sum_{ij} \bigg(1 - \delta_{c_i, c_j}\bigg) X_{ij} X_{ji}$ & \\
+b\textsubscript{O} (liaison role) & \begin{minipage}{.12\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/b_O} \end{minipage} & $ z_{b_O} = \sum_{i \neq j \neq k}^N X_{ij} X_{jk} \bigg(1 - \delta_{c_i,c_j} \bigg) \bigg(1 - \delta_{c_j,c_k} \bigg) $ & \\
+b\textsubscript{IO} (representative role) & \begin{minipage}{.12\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/b_IO} \end{minipage} & $ z_{b_{IO}} = \sum_{i \neq j \neq k}^N X_{ij} X_{jk} \delta_{c_i,c_j} \bigg(1 - \delta_{c_i,c_j} \bigg) \bigg(1 - \delta_{c_j,c_k} \bigg) $ & \\
+b\textsubscript{OI} (gatekeeper role) & \begin{minipage}{.12\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/b_OI} \end{minipage} & $ z_{b_{OI}} = \sum_{i \neq j \neq k}^N X_{ij} X_{jk} \bigg(1 - \delta_{c_i,c_j} \bigg) \delta_{c_i,c_k} \delta_{c_j,c_k} $ & \\
+w\textsubscript{O} (itinerant broker) & \begin{minipage}{.12\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/w_O} \end{minipage} & $z_{w_O} = \sum_{i \neq j \neq k}^N X_{ij} X_{jk} \bigg(1 - \delta_{c_i,c_j} \bigg) \delta_{c_i,c_k} \bigg(1 - \delta_{c_j,c_k} \bigg) $ & \\
+w\textsubscript{I} (coordination role) & \begin{minipage}{.12\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/w_I} \end{minipage} & $z_{b_{w_I}} = \sum_{i \neq j \neq k}^N X_{ij} X_{jk} \delta_{c_i,c_j} \delta_{c_i,c_k} \delta_{c_j,c_k}$ & \\
+Dyadic covariate & \begin{minipage}{.12\textwidth} \centering \includegraphics[width=0.4\linewidth]{Images/DyadicCovariate} \end{minipage} & $z_{Dyadic} = \sum_{i,j}^N X_{ij} Y_{ij} $ & \\
+\bottomrule
 \end{tabular}
-
 \begin{tablenotes}
 \footnotesize
-\item[*] Scripts can be accessed at \url{https://github.com/aterhorst/phd_scripts}
-
+* Refer to Table \ref{tab:ergm_params} for an explanation of each parameter.
 \end{tablenotes}
+
 \end{threeparttable}
-%
 }
 \end{sidewaystable}
