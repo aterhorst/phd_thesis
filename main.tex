@@ -42,9 +42,9 @@
 \usepackage{subcaption}
 \usepackage{lscape}
 \usepackage{float}
-\usepackage{unicode-math}
-\setmainfont{Latin Modern Roman}
-\setmathfont{Latin Modern Math}
+%\usepackage{unicode-math}
+%\setmainfont{Latin Modern Roman}
+%\setmathfont{Latin Modern Math}
 \usepackage{relsize}
 \usepackage{adjustbox}
 \usepackage{rotating}
@@ -64,10 +64,7 @@
 \usepackage{color}
 \usepackage[table,xcdraw]{xcolor}
 
-
-
 \newcommand*\OK{\ding{51}}
-
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -77,7 +74,7 @@
 \newcommand*\rot{\multicolumn{1}{R{90}{1em}}}
 
 \newcommand{\specialcell}[2][c]{%
-  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+ \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 
 \nocite{*} 
 \renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
@@ -109,7 +106,7 @@
 \vspace*{1cm}
 
 \Huge
-\textbf{Exploring the Tacit Dimension of Open Innovation}\\
+\textbf{Tacit Knowledge Sharing in Open Innovation}\\
 \vspace{1cm}
 
 \Large
@@ -179,7 +176,7 @@ Andrew Terhorst\\
 This study was funded by the Commonwealth Scientific and Industrial Research Organisation (CSIRO) as part of its contribution to the Australian Research Council's Pathways to Market Industrial Transformation Hub hosted by the University of Tasmania. \medskip
 
 \noindent
-The author wishes to acknowledge the CSIRO for their extraordinary support and encouragement to get the job done. He is grateful to his supervisors, Professor Dean Lusher, Associate Professor Dianne Bolton, Dr Ian Elsum and Dr Peng Wang. This thesis would never have eventuated without their input. Associate Professor Dianne Bolton deserves special mention. Not only did she introduce the author to Professor Dean Lusher, but she was also always available to answer questions and offer advice. Thanks are due to Dr Aysha Fleming from the CSIRO for her helpful comments and encouragement. The author also wants to acknowledge fellow doctoral candidates, Bopha Roden and Sarah King, for their friendship and support. Last but not least, the author thanks the Swinburne University of Technology Higher Degree Research Office for helping him navigate the rules and procedures of doctoral studies. \medskip
+The author wishes to acknowledge the CSIRO for their extraordinary support and encouragement to get the job done. He is grateful to his supervisors, Professor Dean Lusher, Associate Professor Dianne Bolton, Dr Ian Elsum and Dr Peng Wang. This thesis would never have eventuated without their input. Associate Professor Dianne Bolton deserves special mention. Not only did she introduce the author to Professor Dean Lusher, but she was also always available to answer questions and offer advice. Dr Peng Wang went out of his way to add the five broker role parameters to \texttt{MPNet}. This modification allowed the author to perform more realistic modelling of brokerage in his case studies. Thanks are due to Dr Aysha Fleming from the CSIRO for her helpful comments and encouragement. The author also wants to acknowledge fellow doctoral candidates, Bopha Roden and Sarah King, for their friendship and support. Karin Hoskin checked the formatting, style, and accuracy of text in this manuscript. Last but not least, the author thanks the Swinburne University of Technology Higher Degree Research Office for helping him navigate the rules and procedures of doctoral studies. \medskip
 
 \addcontentsline{toc}{chapter}{Foreword}
 \chapter*{Foreword}
@@ -208,32 +205,29 @@ There is no doubt that I learned much about open innovation through my research.
 
 \mainmatter
 
-\chapter{Introduction}
+\chapter{Introduction} \label{chp:intro}
 \input{Chapters/chapter1}
 
-\chapter{Knowledge networks}
+\chapter{Literature review} \label{chp:lit_review}
 \input{Chapters/chapter2}
 
-\chapter{Motivation, trust, and power}
+\chapter{Methodology} \label{chp:methodology}
 \input{Chapters/chapter3}
 
-\chapter{Methodology}
+\chapter{Case descriptions} \label{chp:case_overview}
 \input{Chapters/chapter4}
 
-\chapter{Case descriptions}
+\chapter{Modelling results} \label{chp:ergm_result}
 \input{Chapters/chapter5}
-
-\chapter{Modelling results}
+%
+\chapter{Qualitative results} \label{chp:qual_analysis}
 \input{Chapters/chapter6}
 %
-\chapter{Qualitative results}
+\chapter{Cross-case analysis} \label{chp:cross_case}
 \input{Chapters/chapter7}
 %
-\chapter{Cross-case analysis}
+\chapter{Conclusion} \label{chp:conclusions}
 \input{Chapters/chapter8}
-%
-\chapter{Conclusion}
-\input{Chapters/chapter9}
 
 \renewcommand{\bibname}{References}
 \bibliography{Qiqqa2BibTexExport}
@@ -245,23 +239,26 @@ There is no doubt that I learned much about open innovation through my research.
 
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 
-\chapter{Ethics clearance}
+\chapter{Ethics clearance} \label{app:ethics}
 \input{Chapters/appendixa}
 
-\chapter{Online survey questionnaire}
+\chapter{Online survey questionnaire} \label{app:survey_q}
 \input{Chapters/appendixb}
 
-\chapter{Semi-structured interview questions}
+\chapter{Semi-structured interview questions} \label{app:interview_q}
 \input{Chapters/appendixc}
 
-\chapter{ERGM parameter estimates: statistical formulae} 
+\chapter{ERGM parameter estimates: statistical formulae} \label{app:formulae}
 \input{Chapters/appendixd}
 
-\chapter{R scripts created for this study}
+\chapter{R scripts created for this study} \label{app:r_scripts}
 \input{Chapters/appendixe}
 
-\chapter{Qualitative analysis codebook}
+\chapter{Qualitative analysis codebook} \label{app:codebook}
 \input{Chapters/appendixf}
+
+\chapter{Other supplementary data} \label{app:supp}
+\input{Chapters/appendixg}
 
 \backmatter
 

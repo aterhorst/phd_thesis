@@ -1,6 +1,10 @@
 \section{Introduction}
 
-This chapter introduces the three open innovation cases recruited for this study. We begin with an overview of each case before comparing them in terms of the number of participants, their demographic and psychological attributes, spatial proximity to one another, knowledge sharing ties, and broker roles. All three cases are quite different, and by the end of this chapter, the reader ought to have a good understanding of each. Without this understanding, it will be harder for the reader to make sense of the results from the exponential random graph modelling and analysis of semi-structured interviews presented in Chapters 6 and 7, respectively. \medskip
+Chapter 5 described each of the three cases and contrasted these in terms of their maturity, type of open innovation, demographics, and different knowledge provider ties. The three cases are quite different in terms of the nature of open innovation (vis-\`a-vis inbound, outbound, and coupled open innovation), their maturity, geographic spread of participants, and extent of tacit and explicit knowledge exchanges. \medskip
+
+This chapter presents the results of our exponential random graph modelling. Recall from Chapter 4 that mixing quantitative and qualitative methods is challenging because of the complex ontological and epistemological issues involved. The stratified ontology of critical realism allows for the legitimate combination of qualitative and quantitative methods. From a critical realist perspective, the exponential random graph models address observed or experienced reality, i.e. the knowledge sharing events in each case. The modelling identifies which network configurations can explain the global structure of observed networks. It targets social processes or mechanisms referred to in the seven propositions developed in Chapters 2 and 3. \medskip
+
+Two sets of modelling were done. The first set examined the role of motivation, trust, and power in tacit and explicit knowledge exchanges in each case and across all three cases. Our second set of models examined the significance of different broker roles in each case. Recall that the online survey asked respondents to name others who provided them with valuable and relevant knowledge. As explained in the section on data pre-processing in Chapter 4 (Section 4.5.2.5), we reversed ties to depict named knowledge providers as senders of knowledge. Reversing the ties ensures we portray the actual direction of knowledge flows. \medskip
 
 \begin{sidewaystable}[p]
 \centering
@@ -9,245 +13,202 @@ This chapter introduces the three open innovation cases recruited for this study
 \footnotesize
 \setlength{\tabcolsep}{6pt}
 \renewcommand{\arraystretch}{1}
-\caption[Distinguishing  features of the three open innovation cases]{Distinguishing features of the three open innovation cases.}
-\label{tab:cases}
-\begin{tabular}{@{}cllccccc@{}}
+\caption[Parameter estimates for the first set of ERGMs]{ERGM parameter estimates for models exploring motivation, trust and power in tacit and explicit knowledge provider networks. Refer to Table \ref{tab:ergm_params} for an explanation of network parameters.}
+\label{tab:ergm_1}
+\begin{tabular}{@{}lrrcrrcrr@{}}
 \toprule
-Case & \multicolumn{1}{c}{Description} & \multicolumn{1}{c}{Challenge} & \makecell[tc]{Type of \\Open \\Innovation} & Stage & \makecell[tc]{Partner \\organisations} & \makecell[tc]{Identified \\participants} & 
-\makecell[tc]{Actual \\participants}\\ \midrule
-1 & Cold-chain innovation & \makecell[tl]{Extend shelf-life of green \\leaf vegetables} & Inbound & Early & 7 & 18 & 18\\
-2 & Farm system innovation & \makecell[tl]{Implement a robotic \\dairy based on voluntary \\cow traffic} & Coupled & Closing & 8 & 25 & 25 \\
-3 & \makecell[tl]{Global honeybee \\research partnership} & \makecell[tl]{Develop a cloud-based data \\analysis system to track \\honeybee movements in and \\out of hives} & Outbound & Very early & 15 & 45 & 40 \\ \bottomrule
-\end{tabular}%
+& \multicolumn{2}{c}{Case 1} &  & \multicolumn{2}{c}{Case 2} &  & \multicolumn{2}{c}{Case 3} \\ \cmidrule(lr){2-3} \cmidrule(lr){5-6} \cmidrule(l){8-9} \multicolumn{1}{c}{} & \multicolumn{1}{c}{Tacit} & \multicolumn{1}{c}{Explicit} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Tacit} & \multicolumn{1}{c}	{Explicit} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Tacit} & \multicolumn{1}{c}{Explicit} \\
+\cmidrule(lr){2-3} \cmidrule(lr){5-6} \cmidrule(l){8-9} 
+\textbf{Purely structural effects (endogenous)} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} &  & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} &  & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} \\
+Arc (edge) & -16.13 (4.39)* & 9.41 (7.03)\phantom{*} &  & -4.59 (1.4)* & -3.73 (1.94)\phantom{*} &  & -7.33 (1.47)* & -2.41 (1.21)\phantom{*} \\
+Reciprocity (mutuality) & -1.76 (1.29)\phantom{*} & -2.04 (1.19)\phantom{*} &  & -0.3 (0.65)\phantom{*} & -0.16 (0.93)\phantom{*} &  & -0.45 (0.62)\phantom{*} & -0.75 (0.46)\phantom{*} \\
+TwoPath (simple connectivity) & -2.63 (1.60)\phantom{*} & -0.25 (0.24)\phantom{*} &  & -0.01 (0.03)\phantom{*} & 0.08 (0.07)\phantom{*} &  & -0.24 (0.13)\phantom{*} & -0.26 (0.13)* \\
+AinS (popularity spread) & -0.87 (0.73)\phantom{*} & 1.82 (0.65)* &  & 0.02 (0.42)\phantom{*} & 0.67 (0.38)\phantom{*} &  & 0.57 (0.34)\phantom{*} & 0.45 (0.29)\phantom{*} \\
+AoutS (activity spread) & 0.21 (0.57)\phantom{*} & -5.96 (2.79)* &  & 0.71 (0.40)\phantom{*} & -0.74 (0.80)\phantom{*} &  & 0.89 (0.37)* & 0.36 (0.31)\phantom{*} \\
+AT-T (path closure) & 1.93 (0.73)* & 0.50 (0.37)\phantom{*} &  & 0.73 (0.23)* & 0.14 (0.20)\phantom{*} &  & 0.49 (0.26)\phantom{*} & 0.49 (0.25)\phantom{*} \\
+A2P-T (multiple connectivity) & 2.58 (1.61)\phantom{*} & 0.37 (0.28)\phantom{*} &  & -0.22 (0.06)* & -0.06 (0.1)\phantom{*} &  & 0.35 (0.13)* & 0.36 (0.14)* \\ \\
+\textbf{Actor-relation effects (exogenous)} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} &  & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} &  & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} \\
+Age (difference) & 0.03 (0.04)\phantom{*} & -0.01 (0.02)\phantom{*} &  & 0.00 (0.01)\phantom{*} & 0.00 (0.01)\phantom{*} &  & -0.01 (0.02)\phantom{*} & -0.04 (0.01)* \\
+Education level (difference) & -0.34 (0.23)\phantom{*} & 0.18 (0.13)\phantom{*} &  & 0.08 (0.07)\phantom{*} & -0.07 (0.08)\phantom{*} &  & -0.12 (0.11)\phantom{*} & -0.12 (0.11)\phantom{*} \\
+Work experience (sender) & 0.00 (0.05)\phantom{*} & -0.12 (0.08)\phantom{*} &  & 0.02 (0.01)* & 0.02 (0.02)\phantom{*} &  & -0.02 (0.02)\phantom{*} & -0.05 (0.02)* \\
+Job tenure (sender) & 0.06 (0.06)\phantom{*} & 0.18 (0.09)* &  & 0.00 (0.01)\phantom{*} & -0.01 (0.02)\phantom{*} &  & 0.04 (0.02)\phantom{*} & 0.07 (0.03)* \\
+Openness (sender) & 1.19 (2.29)\phantom{*} & -3.92 (3.85)\phantom{*} &  & -0.35 (0.47)\phantom{*} & 0.13 (0.92)\phantom{*} &  & 0.06 (0.63)\phantom{*} & -0.46 (0.68)\phantom{*} \\
+Openness (receiver) & 6.19 (2.58)* & -0.66 (1.29)\phantom{*} &  & -0.18 (0.67)\phantom{*} & 0.2 (0.69)\phantom{*} &  & -1.08 (0.64)\phantom{*} & 0.61 (0.59)\phantom{*} \\
+Controlled motivation (sender) & -0.89 (1.88)\phantom{*} & -12.22 (4.84)* &  & 0.56 (0.68)\phantom{*} & 2.16 (1.34)\phantom{*} &  & 2.84 (1.01)* & 1.25 (0.85)\phantom{*} \\
+Controlled motivation (receiver) & -2.44 (2.90)\phantom{*} & 1.61 (1.42)\phantom{*} &  & -1.53 (0.84)\phantom{*} & -1.23 (0.93)\phantom{*} &  & -2.69 (0.94)* & 0.67 (0.71)\phantom{*} \\
+Autonomous motivation (sender) & 1.80 (2.12)\phantom{*} & -0.67 (2.32)\phantom{*} &  & 0.21 (0.52)\phantom{*} & -1.93 (1.11)\phantom{*} &  & -0.24 (0.88)\phantom{*} & -1.08 (0.7)\phantom{*} \\
+Autonomous motivation (receiver) & 9.35 (3.03)* & -1.22 (1.12)\phantom{*} &  & 1.53 (0.75)* & 1.61 (0.90)\phantom{*} &  & 3.62 (1.12)* & -0.15 (0.69)\phantom{*} \\
+Identification with group (sender) & 0.13 (1.13)\phantom{*} & -0.36 (1.54)\phantom{*} &  & 0.00 (0.33)\phantom{*} & 1.77 (0.79)* &  & -1.19 (0.48)* & -0.1 (0.42)\phantom{*} \\
+Identification with group (receiver) & 2.05 (1.62)\phantom{*} & -0.91 (0.77)\phantom{*} &  & 0.02 (0.47)\phantom{*} & -0.08 (0.38)\phantom{*} &  & -0.08 (0.42)\phantom{*} & -0.11 (0.39)\phantom{*} \\
+Employer (match) & 0.07 (0.86)\phantom{*} & 2.36 (0.89)* &  & 0.77 (0.32)* & 0.64 (1.05)\phantom{*} &  & 0.61 (0.35)\phantom{*} & 0.46 (0.31)\phantom{*} \\
+Employer (mismatch reciprocity) & -8.74 (22.83)\phantom{*} & 3.79 (1.32)* &  & 0.71 (0.68)\phantom{*} & 0.48 (0.26)\phantom{*} &  & 1.92 (0.83)* & -0.42 (1.21)\phantom{*} \\ \\
+\textbf{Dyadic covariate effects (exogenous)} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} &  & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} &  & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} \\
+Cognition-based tust & 2.75 (0.79)* & 2.53 (0.56)* &  & 0.78 (0.21)* & 0.96 (0.40)* &  & 1.47 (0.33)* & 0.34 (0.28)\phantom{*} \\
+Reporting hierarchy & 0.47 (0.81)\phantom{*} & 0.31 (0.68)\phantom{*} &  & -1.02 (0.48)* & -0.01 (0.05)\phantom{*} &  & 0.62 (0.50)\phantom{*} & 0.84 (0.4)* \\
+Geographic proximity & -0.26 (0.13)* & 0.08 (0.09)\phantom{*} &  & 0.00 (0.04)\phantom{*} & 0.00 (0.00)\phantom{*} &  & -0.08 (0.05)\phantom{*} & -0.22 (0.05)* \\ \bottomrule
+\end{tabular}
+
+\begin{tablenotes}
+\footnotesize
+\item[a] Estimates are significant (*) when the absolute value of the parameter estimate is more than twice the magnitude of the estimated standard error.
+\item[b] Goodness of fit scores for non-explicitly modelled statistics were less than 2 in all models, a, and less than 0.1 for all explicitly modelled effects, indicating the models provide adequate fit to most aspects of the social structure.
+
+\end{tablenotes}
+
 \end{threeparttable}
 %
 }
 \end{sidewaystable}
 
-\section{Case overviews}
+\section{Models exploring motivation, trust and power}
 
-The distinguishing features of each case are listed in Table \ref{tab:cases}. We are dealing with a small number of individual participants in each case. It is important to note that two of the cases were at an early stage of execution, while the third was in its closing stage at the time of data collection. Case 1 is an example of inbound open innovation, Case 2 is about coupled open innovation, whereas Case 3 is a mixture of outbound and coupled open innovation \citep{gassmann2004towards}. One can characterise innovation as either incremental or radical \citep{ettlie1984organization}. Incremental innovation is about improvements within a given frame of solutions (becoming better at what we already do) whereas radical innovation is a change of frame (doing something we did not do before) \citep{norman2014incremental}. Case 1 is about incremental innovation whereas Case 2 and 3 are more about radical innovation.
+The first set of models examined how autonomous motivation, cognition-based trust, and reporting hierarchy shape tacit and explicit knowledge sharing ties. Apart from modelling each case separately, the networks from each case were combined and modelled as one big network. As explained in Chapter 4, the case-specific networks are non-overlapping and are separated by structural zeros (as per Figure \ref{fig:struct_zeros}). Only within-case ties, and not between-case ties, are modelled \citep{lusher2012trust}. The assumption is that the same endogenous and exogenous processes operate across all three cases \citep{kalish2013brain}. Modelling all the networks together in one ERGM allows us to identify which social processes stand out more generally. \medskip
 
-% \begin{sidewaysfigure}
-% \centering
-% \includegraphics[width = \textwidth]{Images/innovation_types.png}
-% \caption{Different types of innovation. After \citet{keeley2013ten}.}
-% \label{fig:innov_type}
-% \end{sidewaysfigure}
+Parameters used in the first set of models included controlled and autonomous sender/receiver effects (to determine to what extent the two types of motivation predict knowledge sharing) and cognition-based trust and reporting hierarchy dyadic covariate effects (to check to what extent knowledge sharing ties align with cognition-based trust ties and reporting hierarchy ties). Other parameters controlled for network structure (reciprocity, simple and multiple connectivity, popularity and activity spread, and transitive closure), homophily (age and education level difference, employer match), personality (openness to experience sender/receiver), social identity (identification with group sender/receiver), reciprocal exchanges across organisational boundaries (employer mismatch reciprocity), and geographic proximity (log of kilometre distance). Results for each case are presented side-by-side in Table \ref{tab:ergm_1}. Table \ref{tab:ergm_2} presents the results of the combined network analysis. \medskip
 
-\subsection{Case 1: Cold-chain innovation}
+\subsection{Combined networks}
 
-Case 1 revolves around a family-owned business that grows and supplies a range of fresh leafy vegetable products to caterers, restaurants, local greengrocers, and national supermarket chains. Products are supplied either in bulk or in pre-packaged bags sold by the carton. Pre-packaged bags are supplied either as their own branded product or as a supermarket private-label product. The business operates in a region that enjoys a temperate climate, enabling them to grow a greater variety of leafy vegetables all year round. The business competes with a handful of other firms for supply contracts with national supermarket chains. It views itself as a progressive enterprise that combines innovation, expertise, and a good work ethic, to provide the highest quality fresh produce to its customers. \medskip
-
-\subsubsection{Innovation challenge}
-
-Product rejections currently cost the family-owned business between \$100,000 and \$200,000 a year. Fresh leafy vegetable products have a shelf-life of eight days post-production. To maximise product shelf-life, the family-owned business has to deliver products by refrigerated trucks to customers in different parts of the country within two to three days of harvesting. Maintaining uniform air temperatures between 1\si{\degree}C and 4\si{\degree}C in tightly-packed trucks is challenging. Refrigerated air tends to flows around the outside of a load, not through the load, resulting in an uneven temperature distribution that can lead to spoilage. Supermarkets do random checks to check for potential spoilage. Checks involve pushing a temperature probe into a pre-packaged bag or carton. The entire consignment gets rejected if the temperature exceeds a certain threshold. The business has initiated a program to improve on-farm product handling and packaging practices to reduce spoilage and improve the shelf-life of their products. The general manager responsible for product processing and delivery is driving the cold chain initiative. His goal is to ensure the family-owned business is at the forefront of best-practice. \medskip
-
-It is not always clear if product rejections are a result of poor on-farm practices or because of poor temperature control during transit. The business has excellent working relations with its freight forwarders, all of whom are keen to help it improve on-farm product handling and packaging practices. The freight forwarders do not want to suffer penalties for rejected consignments. Working together and sharing practical knowledge is in everybody's best interest. The family-owned business is using wireless micro-sensors supplied by a foreign-based firm to gain insight into air temperature variation inside loaded trucks. The micro-sensors can record time and temperature continuously for up to 30 days. Data can be retrieved from each device using wireless data readers up to 100m away, uploaded to a central database, and queried in a variety of ways. The foreign-based firm is helping the family-owned business develop an independent monitoring system to identify problem shipments before they reach their destination. The family-owned business has also enlisted the local university to model temperature distributions inside refrigerated trucks using the data provided by the wireless sensor devices. The university recently established a research group to investigate how sensor technology and data analytics can be combined to solve practical problems in perishable goods supply chains. The family-owned business hopes the modelling done by this new research group will lead to better load configurations and packaging material to improve product performance. \medskip
-
-The cold chain initiative is an example of inbound open innovation (see Section \ref{sss:oi} for a description of the three main open innovation archetypes) that aims to improve practices. In that sense, the initiative is engaged in incremental innovation. 
-
-\subsubsection{Progress to date}
-
-Case 1 was still at an early stage at the time of data collection. Some temperature data had already been collected using the wireless micro-sensors provided by the foreign-based firm. Preliminary modelling of air temperature distributions had been completed. A web-based data viewer had been implemented, allowing the family-owned business to monitor product temperature in different parts of the refrigerated truck compartment during transit. \medskip
-
-\subsection{Case 2: Farm system innovation}
-
-A multinational milking technology provider headquartered in Europe have developed a rotary milking robot in partnership with an Australian dairy researchers. The rotary milking robot can handle herd sizes of 300 to 800 cows and automates most milking tasks. Apart from creating the potential for significant productivity gains, the rotary milking robot does away with the need to have a twice-a-day milking routine, allowing greater flexibility in how a dairy farm operates. The milking technology provider is piloting its autonomous milk harvester in three countries to see how it performs under different conditions. 
-
-\subsubsection{Innovation challenge}
-
-One of the pilots is located on a family-owned dairy farm in Australia. The rotary milking robot is suited to either batch milking, voluntary milking, or a combination of both. Batch milking involves bringing the cows in groups to the dairy throughout the day. During milking, the operator can leave the dairy and do other tasks. With voluntary milking, cows walk to the dairy on their own, so there is a steady flow of cows moving through the dairy throughout the day and night. The milking technology provider, together with its dairy research partners, is helping the family-owned dairy farm set up a ground-breaking farm system that can handle voluntary milking involving 600 cows. \medskip
-
-The dairy farm has separate grazing areas with automatic gates that control the movement of cows. Each grazing area opens at a different time over a 24-hour cycle. Cows must pass through drafting gates at the milking area to reach the next fresh pasture break. Adapting the autonomous milk harvester to handle large herds is challenging. Optimising the movement of cows through the gates requires a combination of good stockmanship, effective pasture management, and intelligent farm design. Too much pasture encourages cows to linger in the grazing area, resulting in a drop in milking frequency and milk production. On the other hand, too little pasture not only affects cow condition but also leads to an increase in milking frequency, resulting in congestion at the dairy. All this impacts negatively on the operational efficiency of the autonomous milk harvester and ultimately on milk production. \medskip
-
-This project is about intelligent farm design that can accommodate cows' preferred behaviours rather than driving them. Understanding the complex interplay between cow behaviour, pasture management, feeding regimes, and robot technology involved in voluntary milking has required significant sharing of know-how and expertise. The project is an excellent example of coupled open innovation.  
-
-\subsubsection{Progress to date}
-
-The farm system innovation project was wrapping up at the time of data collection. After five years of continuous refinement, the innovative farm system that allowed voluntary milking was able to handle a herd of 600 dairy cows. However, the commercial benefits of such a system had yet to be assessed. 
-
-\subsection{Case 3: Global partnership for honeybee research}
-
-Colony collapse disorder occurs when the majority of worker bees in a honeybee colony disappear. For reasons not fully understood, honeybee colonies around the world are collapsing at an alarming rate. Unchecked, this may lead to food shortages as many crops rely on honeybees for pollination. Research into colony collapse disorder has tended to be piecemeal without a great deal of urgency. Despite the fragmented nature of research into colony collapse disorder, most researchers agree that a key research objective is to gain a deeper understanding of environmental factors that influence honeybee activity. 
-
-\subsubsection{Innovation challenge}
-
-A multidisciplinary government research agency has recently developed a novel approach for tracking honeybee movements. Miniaturised electronic tags are attached to honeybees. Sensors register when bees leave and return to the hive. This information is uploaded to a central data repository in near real-time. By massively scaling data collection efforts worldwide, it should be possible to isolate interesting patterns of honeybee movement using sophisticated data analysis techniques. Finding correlations between patterns of honeybee movement with other environmental information (e.g. local climate variables, traces of pesticides, the co-occurrence of bee predators, or presence of parasites) may shed new light on what is driving colony collapse disorder. However, this does require worldwide coordination of honeybee research. \medskip 
-
-The research agency has invited technology providers and honeybee researchers from across the world to work together in a global partnership for coordinated honeybee research. Various technology providers and research institutions across the world have agreed to work together to help coordinate data collection efforts. The research agency has been supplying sensor kits to bee researchers to enable them to collect and communicate data to the central data repository. Many bee researchers consider the use of nanosensor technology and advanced data analysis to be quite revolutionary.
- \medskip
-
-Because the research agency is providing its know-how and technology to third parties, this case is an example of outbound open innovation. It can become an example of coupled open innovation should third parties eventually contribute to developing analytical techniques. What sets this case apart from the other two cases is the lack of a strong commercial focus. By providing a centralised data analysis platform that bee researchers can access globally, the global partnership is pursuing radical innovation in how bee researchers operate.
-
-\subsubsection{Progress to date}
-
-The global partnership for coordinated honeybee research was in its infancy at the time of data collection. Recruitment of new partners was still ongoing. Some partners were continuing with their bee research independently of others. Knowledge sharing was limited to issues surrounding the deployment and operation of the miniaturised electronic tag technology. How best to exploit the data collected from across the world was yet to be resolved.  
-
-\section{Descriptive statistics}
-
-The three cases are quite different in terms of the type of open innovation, the nature of the challenge, the stage they are at, and their demographic make-up. This study is cross-sectional, and one has to be careful when comparing and contrasting cases. The descriptive statistics presented below provide background information about each case. These statistics should always be back of mind when considering the evidence presented in the following chapters.
-
-\subsection{Participation rates}
-
-A breakdown of the number of partners, number of individual participants, survey response rates, and the number of people interviewed in each case is presented in Table \ref{tab:participation}. Cases 1 and 2 achieved a 100\% survey response rate. Case 3 achieved a 89\% response rate. Of the five participants in Case 3 who declined to participate, two refused outright while the remaining three did not respond at all. The refusals highlighted emerging tensions within the partnership and meant that only 13 of the 15 identified partners were studied. Equipment failure resulted in one interview in Case 3 not being recorded for qualitative analysis. Another interview in Case 3 was cancelled because of foreign language difficulties. Nonetheless, with such high participation rates, one can interpret results with confidence. \medskip
-
-\begin{table}[p]
+\begin{table}[]
 \centering
-\resizebox{\textwidth}{!}{%	
+\resizebox{0.9\textwidth}{!}{	
 \begin{threeparttable}
 \footnotesize
 \setlength{\tabcolsep}{6pt}
 \renewcommand{\arraystretch}{1}
-\caption[Participation rates in each case]{Participation rates in each case.}
-\label{tab:participation}
-\begin{tabular}{@{}ccccccc@{}}
+\caption{ERGM parameter estimates for the combined tacit and explicit knowledge provider networks.}
+\label{tab:ergm_2}
+\begin{tabular}{@{}lrlr@{}}
 \toprule
-Case & \makecell[tc]{Partner \\organisations} & \makecell[tc]{Individual \\participants} & \makecell[tc]{Survey \\responses} & \makecell[tc]{Response \\rate} & \makecell[tc]{Completed \\interviews} & \makecell[tc]{Interview \\coverage} \\ \midrule
-1 & 7 & 18 & 18 & 100\% & 6 & 33\% \\
-2 & 8 & 25 & 25 & 100\% & 8 & 32\% \\
-3 & 15 & 45 & 40 & 89\% & 8 & 22.5\% \\ \bottomrule
-\end{tabular}%
+ & \multicolumn{3}{c}{Cases 1 + 2 + 3} \\ \cmidrule(l){2-4} 
+ & \multicolumn{1}{c}{Tacit} &  & \multicolumn{1}{c}{Explicit} \\ \cmidrule(lr){2-2} \cmidrule(l){4-4} 
+\textbf{Purely structural effects (endogenous)} &  &  &  \\
+Arc (edge) & -4.66 (0.71)* &  & -2.95 (0.83)* \\
+Reciprocity (mutuality) & -0.37 (0.39)\phantom{*} &  & -0.51 (0.37)\phantom{*} \\
+TwoPath (simple connectivity) & -0.05 (0.04)\phantom{*} &  & -0.09 (0.06)\phantom{*} \\
+AinS (popularity spread) & 0.01 (0.18)\phantom{*} &  & 0.63 (0.19)* \\
+AoutS (activity spread) & 0.63 (0.18)* &  & 0.05 (0.21)\phantom{*} \\
+AT-T (path closure) & 0.84 (0.17)* &  & 0.56 (0.13)* \\
+A2P-T (multiple connectivity) & 0.01 (0.05)\phantom{*} &  & 0.09 (0.08)\phantom{*} \\
+&  &  &  \\
+\textbf{Actor-relation effects (exogenous)} &  &  &  \\
+Age (difference) & -0.01 (0.01)\phantom{*} &  & -0.01 (0.01)\phantom{*} \\
+Education level (difference) & 0.08 (0.04)* &  & 0.03 (0.04)\phantom{*} \\
+Work experience (sender) & 0.00 (0.01)\phantom{*} &  & -0.01 (0.01)\phantom{*} \\
+Job tenure (sender) & 0.00 (0.01)\phantom{*} &  & 0.01 (0.01)\phantom{*} \\
+Openness (sender) & -0.53 (0.34)\phantom{*} &  & -0.33 (0.41)\phantom{*} \\
+Openness (receiver) & -0.31 (0.39)\phantom{*} &  & 0.20 (0.32)\phantom{*} \\
+Controlled motivation (sender) & 0.55 (0.57)\phantom{*} &  & 0.56 (0.62)\phantom{*} \\
+Controlled motivation (receiver) & -0.76 (0.64)\phantom{*} &  & -0.32 (0.48)\phantom{*} \\
+Autonomous motivation (sender) & -0.62 (0.39)\phantom{*} &  & -1.29 (0.44)* \\
+Autonomous motivation (receiver) & 1.71 (0.54)* &  & 0.12 (0.39)\phantom{*} \\
+Identification with group (sender) & 0.08 (0.23)\phantom{*} &  & 0.14 (0.27)\phantom{*} \\
+Identification with group (receiver) & -0.32 (0.25)\phantom{*} &  & 0.25 (0.22)\phantom{*} \\
+Employer (match) & 0.47 (0.16)* &  & 0.49 (0.16)* \\
+Employer (mismatch reciprocity) & 0.77 (0.46)\phantom{*} &  & 1.07 (0.45)* \\
+ &  &  &  \\
+\textbf{Dyadic covariate effects (exogenous)} &  &  &  \\
+Cognition-based trust & 1.26 (0.16)* &  & 0.89 (0.16)* \\
+Reporting hierarchy & 0.30 (0.24)\phantom{*} &  & 0.82 (0.22)* \\
+Geographic proximity & 0.00 (0.02)\phantom{*} &  & -0.07 (0.02)* \\ \bottomrule
+\end{tabular}
+\begin{tablenotes}
+\footnotesize
+\item[a] Estimates are significant (*) when the absolute value of the parameter estimate is more than twice the magnitude of the estimated standard error.
+\item[b] Goodness of fit scores were less than 2 for more than 97.85\% of the non-explicitly modelled statistics, indicating the models adequately fit most aspects of the knowledge exchange structure.
+\end{tablenotes}
 \end{threeparttable}
-%
 }
 \end{table}
 
-\subsection{Demographics}
+As mentioned earlier, the combined network analysis allows us to identify which social processes are common across all three cases. Parameter estimates for the combined tacit knowledge network show a significant and positive effect for activity spread and path closure (0.63 and 0.84, respectively). From this one can infer that there are a few knowledgeable people who are happy to share their know-how with others. Much of this know-how is shared with other members of their workgroup. The significant and positive employer (match) effect (0.47) indicates that people also more likely to share their tacit knowledge with others employed in the same organisation. The significant and positive effect for education level difference (difference = 0.08) indicates that tacit knowledge tends to be exchanged between actors with different education levels (there is heterophily effect for education level). We also see a significant and positive autonomous motivation (receiver) effect (1.71) that indicates that recipients of tacit knowledge tend to be are autonomously motivated.  People also tend to share their know-how with others they deem trustworthy (significant and positive cognition-based trust dyadic covariate effect = 1.26). \medskip
 
-Figure \ref{fig:demographics} presents relevant demographic features of each case. As this study concerns tacit knowledge borne from experience, age, relevant work experience, and job tenure are of interest. We also expect people from different educational backgrounds to have differing levels of reliance on tacit knowledge. For example, a farmer is much more reliant on tacit knowledge than a data scientist. \medskip
+In contrast, parameter estimates for the combined explicit knowledge provider network show a significant and positive effect for popularity spread (0.63), indicating that there is a general tendency for explicit knowledge to flow to more central actors. Moreover, the significant and positive dyadic covariate effect for reporting hierarchy (0.82) suggests these central actors are likely to occupy more senior positions. Like the combined tacit knowledge provider network, there is a significant and positive path closure effect (0.56) that suggests explicit knowledge is more likely to be shared with others belonging to the same workgroup. Interestingly, the significant and negative autonomous motivation (sender) effect (-1.29) indicates that autonomously motivated people are generally less likely to share explicit knowledge. One may infer they do not feel pressured to share explicit knowledge. As with the combined tacit knowledge provider network, explicit knowledge tends to be shared with others employed by the same organisation (significant and positive employer (match) effect = 0.49). However, the significant and positive employer (mismatch reciprocity) effect (1.07) indicates that explicit knowledge exchanges among open innovation partners tends to be reciprocal. People are also inclined to share explicit knowledge with people they trust (significant and positive dyadic cognition-based trust covariate effect = 0.89) and who are nearby (significant and negative geographic proximity dyadic covariate effect = -0.07). \medskip
 
-We see in Figure \ref{fig:demographics} that the mean age of participants is quite similar across all three cases, ranging between 44 and 45 years. Most participants are quite mature. Relevant work experience ranges from a mean of 9.2 years to 14.9 years across the three cases. Participants from Case 1 have the least relevant work experience. Participants from Case 2 have the most relevant work experience. Case 2 also has the highest mean job tenure at 13.4 years, versus a mean of 8.4 years and 9.1 years for Cases 1 and 3, respectively. We can conclude from this that participants in Case 2 have the most know-how of all the cases. \medskip
+The combined network analysis provides a general view of endogenous and exogenous network effects. Each case is different in terms of innovation archetype (inbound, outbound, or coupled open innovation), difficulty or complexity of the innovation challenge, and demographic make-up of participants. Modelling each case separately allows one to explore how endogenous and exogenous effects differ between cases.
 
-Education levels range from high school level to doctoral level in all three cases. The educational background of participants in Case 1 is quite diverse, including management and commerce, engineering and related studies, mixed field programmes, agriculture and environmental studies, natural and physical sciences, and education. People with educational backgrounds in agriculture, environmental and related studies dominate Case 2. Case 3 stands out as having the most educated participants. Of the 40 participants who responded to the survey, 29 have doctorates. Agricultural, environmental and related studies, and natural and physical sciences are the dominant educational fields in Case 3. Diverse educational backgrounds may help creative problem-solving but can also make it harder to achieve mutual understanding \citep{mors2010innovation,jen2014social}.
+\subsection{Case 1}
 
-\begin{figure}
+Looking at the results for Case 1, parameter estimates for the tacit knowledge provider network show significant and positive effects for path closure (AT-T = 1.93), openness to experience (receiver = 6.19), autonomous motivation (receiver = 9.35), and cognition-based trust (dyadic covariate = 2.75). These effects suggest participants prefer to share their tacit knowledge with others they have strong ties with. The significant and positive receiver effects reflect a strong learning orientation, i.e. participants who are open to experience and autonomously motivated are more likely to seek out tacit knowledge. The significant and negative effect observed for geographic proximity (dyadic covariate = -0.26) indicates that tacit knowledge is more likely to be exchanged with others who are nearby.  \medskip
+
+As to the explicit knowledge provider network, parameter estimates show significant and positive effects for popularity spread (AinS = 1.82), job tenure (sender = 0.18), employer (match = 2.36 and mismatch reciprocity = 3.79), and cognition-based trust (dyadic covariate = 2.53). Participants are more likely to direct explicit knowledge to a few actors they trust. Explicit knowledge tends to be provided by participants who have been in their current job for some time. The employer (match) effect indicates a tendency to direct explicit knowledge to others from the same organisation. That there is also a significant two-way exchange of explicit knowledge across organisational boundaries (employer (mismatch reciprocity)) is a sign of good collaboration. The significant and negative effect for activity spread suggests explicit knowledge is being evenly distributed and not provided to a few select individuals. Moreover, participants are not feeling pressured to provide explicit knowledge, judging from the significant and negative controlled motivation (sender) effect. Formal structure is not significant in the explicit knowledge provider network. This suggests that formal structure is not interfering with or inhibiting agency. 
+
+\subsection{Case 2}
+
+Modelling of the tacit knowledge provider network yields significant and positive effects for path closure (AT-T = 0.73), work experience (sender = 0.02), autonomous motivation (receiver = 1.53), and cognition-based trust (dyadic covariate = 0.78). The effects for path closure and cognition-based trust indicate participants prefer to share their tacit knowledge with others they trust. Recipients of tacit knowledge also tend to be autonomously motivated. This suggests they have a strong learning orientation. There are significant and negative effects for both multiple connectivity (A2P = -0.22) and reporting hierarchy (dyadic covariate = -1.02). The combination of a significant and positive effect for path closure and a significant and negative effect for multiple connectivity is a sign of good collaboration. Participants are sufficiently well-connected that brokerage is no longer required. The significant and negative effect for reporting hierarchy indicates that tacit knowledge sharing happens mostly through informal structures. Geographic proximity is not a significant factor in the tacit knowledge provider network. \medskip
+
+With respect to the explicit knowledge provider network, the parameter estimates only show significant and positive effects for identification with group (sender = 1.77) and cognition-based trust (dyadic covariate = 0.96). Explicit knowledge is more likely to be provided to trusted others and those they identify strongly with. 
+
+\subsection{Case 3}
+
+Parameter estimates for the tacit knowledge provider network show significant and positive effects for activity spread (AoutS = 0.89), multiple connectivity (A2P = 0.35), controlled motivation (sender = 2.81), autonomous motivation (receiver = 3.62), employer (mismatch reciprocity = 1.92), and cognition-based trust (dyadic covariate = 1.47). The significant and positive effect for activity spread suggests tacit knowledge is being provided by a relatively small number of participants. Put differently, just a few individuals are providing most of the expertise in this case. Participants are also more likely to share their tacit knowledge with others they trust. The significant and positive effect for multiple connectivity is an indicator of substantial brokerage. This is not too surprising, given the open innovation partnership was relatively new and people were still getting to know each other. As with the other cases, recipients of tacit knowledge tend to be autonomously motivated. The significant and positive effect for controlled motivation (sender) suggests, contrary to expectations, that many participants feel obliged to share their tacit knowledge. There is a significant two-way exchange of tacit knowledge across organisational boundaries, judging by the significant and positive effect for employer (mismatch reciprocity). \medskip
+
+In terms of the explicit knowledge provider network, the parameter estimates show significant and positive effects for multiple connectivity (A2P = 0.36), job tenure (sender = 0.07), and reporting hierarchy (dyadic covariate = 0.84). In other words, much of the explicit knowledge flowing through the network is coming from participants who have been in their job for some time. Explicit knowledge also tends to flow up the reporting hierarchy. The estimates show significant and negative effects for simple connectivity (TwoPath = -0.26), age (difference = -0.04), work experience (sender = -0.05), and geographic proximity (dyadic covariate = -0.22). These indicate that received explicit knowledge is not passed on, age homophily is not a factor in explicit knowledge exchanges, and that more experienced participants are less likely to share explicit knowledge with others. Explicit knowledge is also more likely to be exchanged with nearby participants. 
+
+\section{Models examining broker roles}
+
+The second set of models examining the significance of broker roles in each case used fewer parameters than the first set, just path closure and the five broker roles. Including path closure highlights the tension between network closure and brokerage. Table \ref{tab:ergm_3} presents results from the second set of modelling. Any interpretation of these results must consider the broker role counts presented in Figure \ref{fig:gf_brokerage} and the results from the first set of models. Despite including only the five broker roles plus an edge and path closure effect, the models assessing the significance of broker roles can explain most of the observed network configurations. It appears one can characterise open innovation partnerships in terms of path closure and broker roles alone. No attempt was made to do a combined ERGM analysis of broker roles. Generalising broker behaviour was pointless as broker roles vary too much across the three cases. \medskip 
+
+\begin{sidewaystable}[p]
 \centering
-\begin{subfigure}[b]{0.7\textwidth}
-\includegraphics[width=1\linewidth]{Images/age_demographics.png}
-\caption{Age, work experience, and tenure.}
-%\label{fig:age} 
-\end{subfigure}
+\resizebox{0.9\textwidth}{!}{%	
+\begin{threeparttable}
+\footnotesize
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1}
+\caption[Parameter estimates for the second set of ERGMs]{ERGM parameter estimates for models assessing broker roles. Refer to Table \ref{tab:ergm_params} for an explanation of network parameters.}
+\label{tab:ergm_3}
+\begin{tabular}{@{}lrrlrrlrr@{}}
+\toprule
+\multicolumn{1}{c}{} & \multicolumn{2}{c}{Case 1} & \multicolumn{1}{c}{} & \multicolumn{2}{c}{Case 2} & \multicolumn{1}{c}{} & \multicolumn{2}{c}{Case 3} \\ \cmidrule(lr){2-3} \cmidrule(lr){5-6} \cmidrule(l){8-9} 
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{Tacit} & \multicolumn{1}{c}{Explicit} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Tacit} & \multicolumn{1}{c}{Explicit} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Tacit} & \multicolumn{1}{c}{Explicit} \\ \cmidrule(lr){2-3} \cmidrule(lr){5-6} \cmidrule(l){8-9} 
+\textbf{Purely structural effects (endogenous)} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} &  & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} &  & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} \\
+Arc (edge) & -2.56 (0.23)* & -2.47 (0.29)* &  & -2.52 (0.31)* & -2.34 (0.31)* &  & -3.13 (0.12)* & -3.09 (0.15)* \\
+ATA-T (path closure) & 0.73 (0.34)* & 0.85 (0.14)* &  & 1.06 (0.12)* & 0.57 (0.12)* &  & \makecell[c]{---} & 0.81 (0.11)* \\ \\
+\textbf{Actor-brokerage effects (exogenous)} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} &  & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} &  & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} \\
+$w_O$ (liaison) & -0.39 (0.19)\phantom{*} & -0.11 (0.08)\phantom{*} &  & -0.22 (0.06)* & -0.04 (0.06)\phantom{*} &  & 0.04 (0.06)\phantom{*} & -0.2 (0.09)* \\
+$w_I$ (coordinator) & -0.15 (0.46)\phantom{*} & -0.1 (0.29)\phantom{*} &  & -0.05 (0.19)\phantom{*} & -0.09 (0.19)\phantom{*} &  & 0.04 (0.06)\phantom{*} & -0.01 (0.04)\phantom{*} \\
+$b_{OI}$ (gatekeeper) & -0.55 (0.99)\phantom{*} & 0.07 (0.12)\phantom{*} &  & -0.17 (0.11)* & -0.02 (0.11)\phantom{*} &  & 0.32 (0.05)* & 0.06 (0.05)\phantom{*} \\
+$b_{IO}$ (representative) & 0.42 (0.56)* & -0.07 (0.14)\phantom{*} &  & -0.19 (0.1)* & 0.01 (0.1)\phantom{*} &  & 0.33 (0.03)* & 0.05 (0.06)\phantom{*} \\
+$b_O$ (itinerant broker) & -0.63 (0.46)\phantom{*} & -0.62 (0.34)\phantom{*} &  & -0.15 (0.11)\phantom{*} & -0.07 (0.11)\phantom{*} &  & -1.54 (0.48)* & -0.42 (0.23)\phantom{*} \\
+ \bottomrule
+\end{tabular}
+\begin{tablenotes}
+\footnotesize
+\item[a] Estimates are significant (*) when the absolute value of the parameter estimate is more than twice the magnitude of the estimated standard error.
+\item[b] Path closure was not modelled in the Case 3 tacit knowledge network. Inclusion of this parameter resulted in a degenerate model. Despite this, the goodness-of-fit in this particular model was excellent (t-ratios $<2$ for 97\% of the non-explicitly modelled statistics).
+\item[c] Goodness of fit scores were less than 2 for 98.3\% of the non-explicitly modelled statistics, and less than 0.1 for all explicitly modelled parameters, indicating the models provide adequate fit to most aspects of the social structure.
 
-\begin{subfigure}[b]{0.7\textwidth}
-\includegraphics[width=1\linewidth]{Images/ed_level.png}
-\caption{Education level}
-%\label{fig:ed_level}
-\end{subfigure}
+\end{tablenotes}
 
-\begin{subfigure}[b]{0.7\textwidth}
-\includegraphics[width=1\linewidth]{Images/ed_field.png}
-\caption{Education field.}
-%\label{fig:ed_field}
-\end{subfigure}
+\end{threeparttable}
+%
+}
+\end{sidewaystable}
 
-\caption[Demographic information for each case]{Demographic information for the three open innovation cases.}
-\label{fig:demographics}
-\end{figure}
+\subsection{Case 1}
 
+The parameter estimates presented in Table \ref{tab:ergm_1} indicate brokerage does not feature strongly in either the tacit and explicit knowledge networks.  Looking at the broker role counts presented in Figure \ref{fig:gf_brokerage}, the representative role dominates the broker role counts for the tacit knowledge network. The parameter estimates presented in Table \ref{tab:ergm_2} confirm that the representative role is significant in the tacit knowledge network ($b_{IO}$ = 0.42). It appears participants are happy to pass on internal tacit knowledge to others working for different organisations. Though the liaison role dominates the broker role counts in the explicit knowledge network, the parameter estimates indicate this role is not significant. \medskip
 
-\subsection{Psychological attributes}
+Whereas the models exploring autonomous motivation, cognition-based trust, and reporting hierarchy show a significant and positive effect for path closure in the tacit knowledge network only, the more simple models examining broker roles show a significant and positive effect for path closure in both the tacit and explicit knowledge networks (AT-T = 0.73 and 0.85, respectively). Path closure was included to highlight the tension between network closure and brokerage. The significant and positive effect for path closure indicates network closure is more dominant than brokerage in both networks. 
 
-Previous research has shown that human psychology does impact knowledge sharing behaviour. For example, studies show that the personality traits of agreeableness, conscientiousness, and openness to experience correlate positively with knowledge sharing \citep{matzler2011personality,borges2012tacit}. Other studies find that intrinsically motivated individuals are also more likely to share their tacit knowledge \citep{hung2011influence,llopis2016understanding}. Another example is that people who identify strongly with their group are less inclined to share knowledge outside their group \citep{kane2005knowledge,argote2009superordinate,dokko2014one}. Studies also show that people with high levels of job-related and creative self-efficacy tend to be more innovative \citep{farmer2006developing, leonard2014knowledge}. \medskip
+\subsection{Case 2}
 
-Figure \ref{fig:psycho} shows the range of different psychological attributes in each case. Conscientiousness is the dominant personality trait in all three cases. The dominant form of work motivation is introjected and identified regulation. Introjected regulation represents engagement in an activity out of ego‐involvement, whereas identified regulation represents engagement in an activity out of personal meaning and perceived importance \citep{gagne2019different}. Performing meaningful work features strongly in the responses to the semi-structured interview questions in Chapter 7. Participants in all three cases rate themselves as having a high level of self-efficacy. \medskip
+The parameter estimates presented in Table \ref{tab:ergm_1} show that there is significantly less brokerage and significantly more clustering in the tacit knowledge network. This combination is a sign of excellent collaboration. Given this case was winding up at the time of data collection, this is not surprising. Brokers are unlikely to feature in well-established partnerships. Although the liaison role domineers broker role counts in both the tacit and explicit knowledge networks, the modelling of broker roles shows this role is under-represented in the tacit knowledge network ($w_0$ = -0.22) and not significant in the explicit knowledge network. The modelling also reveals that the gatekeeper and representative roles are significantly under-represented in the tacit knowledge network ($b_{IO}$ = -0.17, $b_{OI}$ = -0.19). 
 
-Regarding social identity, participants in Case 1 identify more strongly with the open innovation partnership than the participants from Case 2 and Case 3. Identifying with the partnership may indicate a higher level of commitment to achieving partnership goals. Participants in Case 2 identify more with their employer. It seems that participants in Case 3 are ambivalent about social identity. \medskip
+\subsection{Case 3}
 
-How openness to experience, work motivation, and social identity affect tacit knowledge sharing in each case is examined in more detail in Chapter 6.
+The parameter estimates presented in Table \ref{tab:ergm_1} suggest brokerage is significant in both the tacit and explicit knowledge networks. Considering this case was at a very early stage at the time of data collection, this is not unexpected. The absence of significant and positive effects for path closure in both networks suggests brokerage is the dominant network process. However, the parameter estimates presented in Table \ref{tab:ergm_2} are contradictory. These show a significant and positive effect for path closure in the explicit knowledge network (AT-T = 0.81). Unfortunately, path closure could not be modelled in the tacit knowledge network. Inclusion of this parameter resulted in a degenerate model. The significant and positive effect for path closure in the explicit knowledge network does indicate path closure is the more dominant network process. \medskip 
 
-\begin{landscape}
-\begin{figure*}
-\centering
-\begin{subfigure}[b]{0.7\textwidth}
-\centering
-\includegraphics[width=\textwidth]{Images/personality_case.png}
-\caption[]%
-{{\small Personality traits.}}    
-\label{fig:personality}
-\end{subfigure}
-\hfill
-\begin{subfigure}[b]{0.7\textwidth}  
-\centering 
-\includegraphics[width=\textwidth]{Images/work_motivation_case.png}
-\caption[]%
-{{\small Work motivation.}}    
-\label{fig:motivation}
-\end{subfigure}
-\vskip\baselineskip
-\begin{subfigure}[b]{0.7\textwidth}   
-\centering 
-\includegraphics[width=\textwidth]{Images/efficacy_case.png}
-\caption[]%
-{{\small Self-efficacy.}}    
-\label{fig:efficacy}
-\end{subfigure}
-\hfill
-\begin{subfigure}[b]{0.7\textwidth}   
-\centering 
-\includegraphics[width=\textwidth]{Images/identification_case.png}
-\caption[]%
-{{\small Social identity.}}    
-\label{fig:identification}
-\end{subfigure}
-\caption[Psychological attributes of case participants]
-{\small {Psychological attributes of case participants.}} 
-\label{fig:psycho}
-\end{figure*}
-\end{landscape}
-
-\subsection{Geographic proximity}
-
-The geographic spread of participants has implications for tacit knowledge sharing, which generally happens through face-to-face interactions. Participants who are not nearby have fewer opportunities to exchange tacit knowledge with one another. All three cases involve participants based in multiple countries. Figure \ref{fig:spherical} depicts matrices that show the spherical distance between participants in each case (based on reported workplace postcodes). Case 1 has participants local to each other, in another part of Australia, and one based on another continent. Participants in Case 2 are more spread out. While some participants are local, others are located much further afield, either in another part of the country or another country or continent altogether. Participants in Case 3 are also spread out, with some located on separate continents. How geographic spread of participants impacts tacit knowledge sharing in each case is examined more closely in Chapters 6 and 7.  \medskip
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width = 0.5\linewidth]{Images/proximity.pdf}
-\caption[Geographical separation between participants]{Geographical separation between participants. The numbers on each axes refer to each participant's network id.}
-\label{fig:spherical}
-\end{figure}
-
-\subsection{Network diagrams}
-
-Figures \ref{fig:network_case_1} to \ref{fig:network_case_3} depict the tacit and explicit knowledge provision ties between participants within each case. Nodes are coloured by partner affiliation and sized according to their Everett-Valente brokerage score (see section \ref{sss:descriptive_network_analysis} for an explanation of this score), where larger nodes have greater access to diverse knowledge. The direction of knowledge flow is indicated by edge shading (flows from light to dark). Edge colours reflect the geographical separation between nodes (lighter colours indicate greater separation). \medskip
-
-Each case has a few highly central actors, some of whom are particularly dominant. Graph densities indicate that the bulk of the knowledge provided in Case 1 is explicit. There is more of an even balance in Case 2, where tacit knowledge provision edges out explicit knowledge provision. Though Case 3 is also more balanced, the density of the explicit knowledge network is slightly higher than that for the tacit knowledge. Edge colours indicate the distance between connected nodes. Lighter colours mean greater separation between nodes. What is notable is the geographic separation between nodes exchanging tacit knowledge. It indicates some participants make a considerable effort to meet face-to-face despite working far apart. \medskip
-
-\begin{sidewaysfigure}
-\includegraphics[width=1\linewidth]{Images/networks_case_1.png}
-\caption[Knowledge networks for Case 1]{Knowledge networks for Case 1 (see text for an explanation of the different graphical representations).}
-\label{fig:network_case_1} 
-\end{sidewaysfigure}
-
-\begin{sidewaysfigure}
-\includegraphics[width=1\linewidth]{Images/networks_case_2.png}
-\caption[Knowledge networks for Case 2]{Knowledge networks for Case 2 (see text for an explanation of the different graphical representations).}
-\label{fig:network_case_2} 
-\end{sidewaysfigure}
-
-\begin{sidewaysfigure}
-\includegraphics[width=1\linewidth]{Images/networks_case_3.png}
-\caption[Knowledge networks for Case 3]{Knowledge networks for Case 3 (see text for an explanation of the different graphical representations).}. 
-\label{fig:network_case_3} 
-\end{sidewaysfigure}
-
-\subsection{Broker roles}
-
-Brokers are well placed to facilitate the flow of knowledge across organisational boundaries. By examining broker roles, one can assess knowledge diffusion in open innovation partnerships. Figure \ref{fig:gf_brokerage} presents a breakdown of \citet{gould1989structures} broker roles by knowledge type in each case (refer to Table \ref{tab:ergm_params} for an explanation of these roles).  \medskip
-
-The mix of broker roles reveals something about knowledge sharing behaviour in each case. Looking at Case 1, the liaison broker role is dominant in the explicit knowledge provider network, indicating participants are happy to pass on explicit knowledge from one partner to another partner. Some participants operate in a representative broker role, suggesting they are open to sharing their organisation's explicit knowledge with third-parties. The representative broker role is dominant in the tacit knowledge provider network, indicating that participants are open to sharing their organisational know-how and expertise with third-parties. As to Case 2, the liaison role dominates both the explicit and tacit knowledge provider networks. Participants in Case 2 appear willing to pass on all types of knowledge from one partner to another partner, a good sign of collaboration. The internal coordinator role dominates the explicit knowledge provider network in Case 3. Given that almost half the participants in Case 3 work for the same organisation, this is not surprising. The tacit knowledge provider network does not have a dominant broker role. Very few participants operate as itinerant brokers in any of the cases. Note that Figure \ref{fig:gf_brokerage} presents raw broker counts. The statistical significance of the different broker roles receives more attention in Chapter 6. \medskip
-
-\begin{figure}
-\centering
-\includegraphics[width = \linewidth]{Images/gf_brokerage.png}
-\caption[Breakdown of broker roles]{Breakdown of \citet{gould1989structures} broker roles. Note $w_I$ = internal coordinator role, $b_O$ = liaison role, $b_{OI}$ = gatekeeper role, $b_{IO}$ = representative role, and $w_O$ = itinerant broker role.}
-\label{fig:gf_brokerage}
-\end{figure}
+Looking at the broker role counts presented in Figure \ref{fig:gf_brokerage}, the itinerant broker role hardly features in either the tacit or explicit knowledge networks. Other roles are evenly spread in the tacit knowledge network, while the coordinator role dominates the explicit knowledge network, the modelling of broker roles show a significant and positive effect for both the gatekeeper and representative role in the tacit knowledge network ($b_{IO}$ = 0.32, $b_{OI}$ = 0.33). The modelling confirms that the itinerant broker role is significantly under-represented in the tacit knowledge network ($b_O$ = -1.54). Apart from the significant and negative effect for the liaison role ($w_O$ = -0.2), there are no significant broker role effects in the explicit knowledge network. \medskip  
 
 \section{Chapter summary}
 
-Case 1 is an example of incremental inbound open innovation. Most of the knowledge exchanged in Case 1 is explicit. One can categorise Case 2 as an example of coupled open innovation. Realising a farm system based on voluntary cow traffic is a radical innovation. Tacit knowledge features prominently in Case 2, even though many of the participants have to collaborate over great distances. Case 3 is an example of outbound open innovation. Using a combination of miniaturised electronic tags and cloud-based data analytics to coordinate honeybee research on a global basis is considered radical innovation. As with Case 2, participants in Case 3 have to collaborate across vast distances. \medskip
+Though each open innovation partnership is different, some network effects are common to two or more cases. Concerning the first set of models, the tacit knowledge provider networks exhibit significant path closure in Case 1 and Case 2. Path closure indicates that know-how features strongly in group practice. Tacit knowledge brokerage is significantly under-represented in Case 2 and significantly over-represented in Case 3. The opposite effects reflect the maturity of each partnership. Case 2 is quite mature with well-established groups, unlike Case 3, which is still in its formative stages. \medskip
 
-% The average age of participants is relatively similar across all three cases. All three cases have participants from diverse educational backgrounds. Case 3 stands out as having the most educated participants. There are few highly central actors in the Case 1 and Case 3 networks. While this may reflect the immaturity of these two cases, it does indicate the concentration of power among a few individuals. There are fewer central actors in Case 2, indicating that most actors benefit from knowledge exchanges. Tacit knowledge appears to feature more strongly in the cases engaged in radical innovation. The liaison broker role dominates Cases 1 and 2, a sign of good inter-organisational collaboration. The coordinator broker role dominates Case 3, which is not surprising, given that almost half the participants belong to the same organisation. \medskip
+All three cases have a significant autonomous motivation receiver effect in their tacit knowledge provider networks, indicating that learning features prominently in all three cases. Cognition-based trust is a significant dyadic covariate in all but one of the knowledge provider networks (it was not significant in the Case 3 explicit knowledge provider network). Participants are more likely to share their know-how and know-what with others they consider trustworthy in terms of ability and competence. \medskip
 
-The cases are very different in terms of the type of open innovation, the stage they are at, demographic makeup, and brokerage patterns. One must be careful not to over-generalise the findings from each case. How the unique characteristics of each case shape tacit knowledge sharing will become more apparent in the following chapters. The next chapter presents the results from the exponential graph modelling. It drills much deeper into the data presented in this chapter. The modelling results will highlight the statistical significance of exogenous factors influencing tacit knowledge sharing in the three open innovation partnerships. 
+Concerning the second set of models assessing broker roles, path closure was significant in all but one of the knowledge provider networks (it was not possible to model path closure in the Case 3 tacit knowledge provider network). All three tacit knowledge provider networks had significant representative broker role effects. More specifically, Case 1 and 3 had a positive effect, unlike Case 2, which had a negative effect. Significant negative and positive gatekeeper role effects feature in Case 2 and Case 3 tacit knowledge provider networks, respectively. The representative and gatekeeper broker roles appear to be less critical in established tacit knowledge networks. \medskip
+
+A surprising outcome is how the second set of models can explain most of the observed configurations in our knowledge networks. Some may ask what this means, given that we have two sets of models, each set providing a plausible explanation of observed network structure. The broker roles represent distinct triadic structures distinguished by group membership. These distinct structures are likely to be subsuming other more general triadic structures. General effects in ERGMs are usually seen to represent a kind of average across the entire graph. The results from the second set of models indicate that such generalisation may be imprecise. More heterogeneous parameters such as the broker role types may show different closure or non-closure in different parts of the network as defined by group boundaries. In other words, the second set of models may be providing a more nuanced and precise explanation of network structure (Garry Robins and Johan Koskinen, personal communication\footnote{Professor Garry Robins (h-index $> 63$) and Dr Johan Koskinen (h-index $>22$) are leading scientists driving the development of statistical models for social networks.}). It seems one can characterise open innovation partnerships in terms of path closure and broker roles alone. \medskip
+
+From a critical realist perspective, the exponential random graph modelling accounts for the observed or experienced reality. The next chapter presents the results from the qualitative analysis, which should shed light on contextual factors that influenced knowledge sharing (what happens in actual practice).
