@@ -1,11 +1,9 @@
-\documentclass[12pt,table]{book}
+\documentclass[12pt,table,xcdraw]{book}
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
 \usepackage{fancyhdr}   
-\usepackage{lipsum}
 \usepackage{pbox}
 \usepackage{dcolumn}
 \usepackage{graphicx}
-\usepackage{xcolor}
 \usepackage{etoolbox}
 \usepackage{pgf}
 \usepackage{subcaption}
@@ -18,13 +16,15 @@
 \usepackage{highlight}
 \bibliographystyle{agsm}
 \usepackage[normalem]{ulem} 
-% \usepackage[sectionbib]{chapterbib}
+\useunder{\uline}{\ul}{}
+%\usepackage[sectionbib]{chapterbib}
 % \bibliographystyle{agsm}
 \setcitestyle{authoryear,open={(},close={)}}
 \usepackage{setspace}
 \usepackage{url}
 \usepackage{enumitem}
 \usepackage{filecontents}
+\usepackage{moresize}
 \usepackage{minted}
 \usepackage{pdflscape}
 \usepackage[nottoc,notlof,notlot]{tocbibind} 
@@ -62,7 +62,7 @@
 \usepackage[flushleft]{threeparttable}
 \usepackage [autostyle, english = american]{csquotes}
 \usepackage{color}
-\usepackage[table,xcdraw]{xcolor}
+\usepackage{xcolor}
 
 \newcommand*\OK{\ding{51}}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -176,18 +176,18 @@ Andrew Terhorst\\
 This study was funded by the Commonwealth Scientific and Industrial Research Organisation (CSIRO) as part of its contribution to the Australian Research Council's Pathways to Market Industrial Transformation Hub hosted by the University of Tasmania. \medskip
 
 \noindent
-The author wishes to acknowledge the CSIRO for their extraordinary support and encouragement to get the job done. He is grateful to his supervisors, Professor Dean Lusher, Associate Professor Dianne Bolton, Dr Ian Elsum and Dr Peng Wang. This thesis would never have eventuated without their input. Associate Professor Dianne Bolton deserves special mention. Not only did she introduce the author to Professor Dean Lusher, but she was also always available to answer questions and offer advice. Dr Peng Wang went out of his way to add the five broker role parameters to \texttt{MPNet}. This modification allowed the author to perform more realistic modelling of brokerage in his case studies. Thanks are due to Dr Aysha Fleming from the CSIRO for her helpful comments and encouragement. The author also wants to acknowledge fellow doctoral candidates, Bopha Roden and Sarah King, for their friendship and support. Karin Hoskin checked the formatting, style, and accuracy of text in this manuscript. Last but not least, the author thanks the Swinburne University of Technology Higher Degree Research Office for helping him navigate the rules and procedures of doctoral studies. \medskip
+The author wishes to acknowledge the CSIRO for their extraordinary support and encouragement to get the job done. He is grateful to his supervisors, Professor Dean Lusher, Associate Professor Dianne Bolton, Dr Ian Elsum and Dr Peng Wang. This thesis would never have eventuated without their input. Associate Professor Dianne Bolton deserves special mention. Not only did she introduce the author to Professor Dean Lusher, but she was also always available to answer questions and offer advice. Dr Peng Wang went out of his way to extend \texttt{MPNet} to handle broker role parameters. This modification allowed the author to perform more realistic modelling of brokerage in his case studies. Thanks are due to Dr Aysha Fleming from the CSIRO for her helpful comments and encouragement. The author also wants to acknowledge fellow doctoral candidates, Bopha Roden and Sarah King, for their friendship and support. Karin Hosking checked the formatting, style, and accuracy of text in this manuscript. Ronald Burt (University of Chicago Booth School of Business), Henry Chesbrough (Haas School of Business at the University of California, Berkeley), and David Obstfeld (California State University) are thanked for sharing pre-publication material with the author. Garry Robins and Johan Koskinen from the University of Melbourne, and Carter Butts (University of California, Irvine) advised the author on various aspects of exponential random graph modelling. Last but not least, the author thanks the Swinburne University of Technology Higher Degree Research Office for helping him navigate the rules and procedures of doctoral studies. \medskip
 
 \addcontentsline{toc}{chapter}{Foreword}
 \chapter*{Foreword}
 
-One must demonstrate a capacity for independent, critical thinking in a doctoral thesis. Examiners want to see evidence of originality and logical arguments. They do not want to see careless mistakes that indicate sloppy research \citep{mullins2002its}. My goal in writing this thesis was to present a rigorous and coherent analysis of tacit knowledge sharing in open innovation. It was clear early on that I would need a combination of quantitative and qualitative analysis to address my research questions. I learnt that reconciling different ontological and epistemological assumptions can be quite problematic in mixed-method research, which led me to embrace critical realism as my research philosophy. It allows one to consider reality in terms of observed or measured reality, perceived or unmeasured reality, and actual reality \citep{bhaskar2013realist}. Unpacking these different realities using deductive, inductive and retroductive reasoning has been eye-opening and confidence-building. \medskip
+One must demonstrate a capacity for independent, critical thinking in a doctoral thesis. Examiners want to see evidence of originality and logical arguments. They do not want to see careless mistakes that indicate sloppy research \citep{mullins2002its}. My goal in writing this thesis was to present a rigorous and coherent analysis of tacit knowledge sharing in open innovation. It was clear early on that I would need a combination of quantitative and qualitative analysis to address my research questions. Reconciling different ontological and epistemological assumptions can be quite problematic in mixed-method research, which led me to embrace critical realism as my research philosophy. It allows one to consider reality in terms of observed or measured reality, perceived or unmeasured reality, and actual reality \citep{bhaskar2013realist}. Unpacking these different realities using deductive, inductive and retroductive reasoning has been eye-opening and confidence-building for me. \medskip
 
-I knew very little about social network analysis at the beginning of my doctoral studies. Because social network analysis is data-intensive, I decided to learn how to program in \texttt{R} to become more proficient at data manipulation. I completed online data science courses offered by John Hopkins University (USA), namely \enquote{Computing for Data Analysis}, \enquote{Getting and Cleaning Data}, \enquote{Exploratory Data Analysis}, and \enquote{The Data Scientist's Toolbox}. Each course took 4 weeks to complete. Having mastered basic \texttt{R} programming, I then did an 8-week online course entitled \enquote{Social Network Analysis} offered by the University of Michigan (USA). This course provided an excellent foundation in social network analysis. To cap things off, I attended a 5-day \enquote{Introduction to Social Network Analysis} course offered by the Swinburne University of Technology. This course introduced me to exponential random graph models. I now consider myself a competent social network analyst. \medskip
+I knew very little about social network analysis at the beginning of my doctoral studies. Because social network analysis is data-intensive, I decided to learn how to program in \texttt{R} to become more proficient at data manipulation. I completed online data science courses offered by John Hopkins University (USA), namely \enquote{Computing for Data Analysis}, \enquote{Getting and Cleaning Data}, \enquote{Exploratory Data Analysis}, and \enquote{The Data Scientist's Toolbox}. Each course took 4 weeks to complete. Having mastered basic \texttt{R} programming, I then did an 8-week online course entitled \enquote{Social Network Analysis} offered by the University of Michigan (USA). This course provided an excellent foundation in social network analysis. To cap things off, I attended a 5-day \enquote{Introduction to Social Network Analysis} course offered by the Swinburne University of Technology. This course introduced me to exponential random graph models. I now consider myself a reasonably competent social network analyst. \medskip
 
 I did not appreciate how much thought has to go into designing an online survey questionnaire until I completed an online course entitled \enquote{Questionnaire Design for Social Surveys} offered by the University of Maryland (USA). This 4-week course taught me to formulate short and unambiguous questions, avoid responder fatigue, manage selective recall, and pilot surveys. One component of this course addressed interviewing skills, which prompted me to explore further the theory and practice of successful interview techniques \citep[e.g.][]{kvale2008doing,seidman2012interviewing}. I also attended a one-day CSIRO course entitled \enquote{Human Research Ethics for Researchers}. This course introduced me to the \enquote{The National Statement on Ethical Conduct in Human Research}, which sets out national standards for the ethical design, review and conduct of human research. I made sure my research adhered to this standard. \medskip
 
-I also completed a two-day introduction to \texttt{NVivo}\texttrademark\ course presented by QSR International as I planned to code semi-structured interview transcripts using this software package. Coding interview transcripts was particularly challenging for me. Everybody I spoke to approached coding differently. As \citet{saldana2015coding} notes, there is no right or wrong way to go about coding. After many false starts, I managed to find a way to code that worked for me. I believe I managed to balance my thesis's quantitative and qualitative paradigms. Academic writing does not come easily to me. Early criticism of my writing was keenly felt. I only started to relax when it dawned upon me that I was becoming a \enquote{subject matter expert} and could communicate with authority. \medskip
+I also completed a two-day introduction to \texttt{NVivo}\texttrademark\ course presented by QSR International as I planned to code semi-structured interview transcripts using this software package. Coding interview transcripts was particularly challenging for me. Everybody I spoke to approached coding differently. As \citet{saldana2015coding} notes, there is no right or wrong way to go about coding. After many false starts, I managed to find a way to code that allowed me to balance my thesis's quantitative and qualitative paradigms. Academic writing does not come easily to me. Early criticism of my writing was keenly felt. I only started to relax when it dawned upon me that I was becoming a \enquote{subject matter expert} and could communicate with some authority. \medskip
 
 There is no doubt that I learned much about open innovation through my research. I discovered the importance of tacit knowledge for problem-solving and now understand how tacit knowledge defines who we are and what this means for power and trust relations. More importantly, I recognise the importance of skilled brokerage to facilitate tacit knowledge flows in open innovation. 
 
@@ -233,6 +233,13 @@ There is no doubt that I learned much about open innovation through my research.
 \bibliography{Qiqqa2BibTexExport}
 
 \appendix
+
+\addtocontents{toc}{\protecting{
+  \addtolength{\cftchapnumwidth}{6em}
+  \renewcommand{\cftchappresnum}{\appendixname\space}
+  \renewcommand{\cftchapaftersnum}{\space - \space}
+}}
+
 \setcounter{table}{0}
 \renewcommand{\thetable}{\Alph{chapter}\arabic{table}}
 \singlespacing
@@ -256,9 +263,6 @@ There is no doubt that I learned much about open innovation through my research.
 
 \chapter{Qualitative analysis codebook} \label{app:codebook}
 \input{Chapters/appendixf}
-
-\chapter{Other supplementary data} \label{app:supp}
-\input{Chapters/appendixg}
 
 \backmatter
 
