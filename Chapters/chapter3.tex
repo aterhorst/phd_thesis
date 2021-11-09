@@ -1,6 +1,6 @@
 \section{Introduction}
 
-This thesis employs a mixed-methods approach based on critical realism to examine the social mechanisms that shape tacit knowledge sharing in three open innovation partnerships. It characterises an open innovation partnership as a temporary knowledge network and assumes that human agency lies at the heart of tacit knowledge sharing. Autonomous motivation, the disposition to trust, and power relations in various social contexts influence an individual's decision to share or seek out tacit knowledge. We can use social network analysis to evaluate the interaction between agency and structure in open innovation partnerships and how this shapes tacit knowledge sharing behaviour. \medskip
+This thesis employs a mixed-method approach based on critical realism to examine the social mechanisms that shape tacit knowledge sharing in three open innovation partnerships. It characterises an open innovation partnership as a temporary knowledge network and assumes that human agency lies at the heart of tacit knowledge sharing. Autonomous motivation, the disposition to trust, and power relations in various social contexts influence an individual's decision to share or seek out tacit knowledge. We can use social network analysis to evaluate the interaction between agency and structure in open innovation partnerships and how this shapes tacit knowledge sharing behaviour. \medskip
 
 This chapter explains the methodology used to assess the propositions developed in Chapter 2 across three open innovation partnerships. It includes justifications for embracing a critical realist worldview and employing a case-based mixed-method research design. The chapter details the quantitative and qualitative procedures used to collect and analyse data and the critical realist process used to interpret the data. 
 
@@ -217,7 +217,7 @@ A social network is a way to conceptualise a social system in terms of the struc
 \begin{figure}
     \centering
     \includegraphics[width=1.0\linewidth]{Images/example_networks.png}
-    \caption[Example networks]{Example network with (a) undirected binary ties, (b) directed binary ties, and (c) valued ties (edges are weighted according to some value).}
+    \caption[Examples of directed, undirected and valued networks]{Example network with (a) undirected binary ties, (b) directed binary ties, and (c) valued ties (edges are weighted according to some value).}
     \label{fig:examples}
 \end{figure}
 
@@ -325,7 +325,7 @@ The \enquote{Everett-Valente} brokerage score was implemented in \texttt{R} usin
 
 Each case involved two sets of ERGMs. One set of ERGMs tested propositions about the role of motivation, trust, and power in tacit and explicit knowledge exchanges, while the other set examined the significance of different broker roles in each case. The propositions and exploratory analysis guided choosing which actor-relation effects to include in the first set of ERGMs. In addition to modelling each case separately, the cases were modelled together in one single ERGM. Modelling the cases in a single ERGM assumes the same endogenous and exogenous processes apply in all cases \citep{kalish2013brain}. Because the cases are unrelated to each other, the single ERGM used \enquote{structural zeros} to ensure that only between-case ties and not within-case ties were modelled \citep{lusher2012trust}. Structural zeros indicate there are no ties in these parts of the combined network -- there cannot be because there are no connections between cases (see Figure \ref{tab:combined}). Modelling each case separately and then together in one combined network allows one to obtain a more nuanced view of processes operating in each case and how these deviate from the more general perspective. \medskip
 
-\begin{figure}[h]
+\begin{figure}[hbt!]
 \begin{subtable}[h]{\textwidth}
 \centering
 \fontsize{16}{28} \selectfont
@@ -444,20 +444,13 @@ Each case involved two sets of ERGMs. One set of ERGMs tested propositions about
 \caption{Structural zero adjacency matrix.}
 \label{tab:zeros}
 \end{subtable}
-\caption{Example combined network adjacency matrix with associated structural zeros adjacency matrix. Non-overlapping networks representing different cases are shaded red, green and blue. Structural zeros ensure we only model within-case ties and not between-case ties.}
+\caption[Example combined network adjacency and structural zeros adjacency matrices]{Example combined network adjacency matrix with associated structural zeros adjacency matrix. Non-overlapping networks representing different cases are shaded red, green and blue. Structural zeros ensure we only model within-case ties and not between-case ties.}
 \label{tab:struct_zero}
 \end{figure}
 
-% \begin{figure}
-% \centering
-% \includegraphics[width = 0.7\textwidth]{Images/struc_zero_nets.png}
-% \caption[Directed network diagram generated from the example big network adjacency matrix]{Network diagram generated from the example combined network adjacency matrix depicted in Figure \ref{tab:combined}. None of the networks overlap.}
-% \label{fig:struc_zero_nets}
-% \end{figure}
-
 \citet{gould1989structures} estimated the statistical significance of their five broker roles using a simple $p^1$ model. Their approach does not account for other possible network effects and tie dependencies that are likely to produce distorted results. Modifications were made to \texttt{MPNet} to allow the statistical significance of the different broker roles to be estimated more accurately. Parameter estimates based on a simple $p^1$ model were compared with those produced by the \texttt{sna} package \citep{butts2016sna} to check the modifications to \texttt{MPNet} were in agreement with \citet{gould1989structures}. The modified software was used in the second set of model estimations to characterise the three open innovation partnerships in terms of the mix of significant broker roles. Table \ref{tab:ergm_params} lists the model parameters used in this study. Appendix \ref{app:formulae} lists the statistical formulae for these parameters. \medskip
 
-\begin{table}[!htbp]
+\begin{table}[hbt!]
 \centering
 \resizebox{\textwidth}{!}{%	
 \begin{threeparttable}
@@ -554,7 +547,7 @@ The second step combines the results of the social network analysis with the cod
 
 In the final third and final step, we use the logic of retroduction to develop a causal framework for each case and then the logic of retrodiction to combine the causal frameworks for each case, allowing us to provide new or better explanations of tacit knowledge sharing mechanisms \citep{mcavoy2018critical}. This approach delivers an updated set of propositions that can account for what is happening in practice and what is driving practice. Figure \ref{fig:coding_process} summarises the critical realist coding process used in this study. Codes from each case were recorded into a universal codebook (a codebook is a compilation of all the codes, their content descriptions, and a brief data example for reference) \citep{guest2011applied}. 
 
-\begin{sidewaysfigure}
+\begin{sidewaysfigure}[hbtp]
 \centering
 \includegraphics[width = 0.9\textwidth,
 height = 0.7\textheight, keepaspectratio]{Images/CR.pdf}
@@ -564,6 +557,6 @@ height = 0.7\textheight, keepaspectratio]{Images/CR.pdf}
 
 \section{Summary}
 
-This thesis employs a mixed-methods approach to examine the social mechanisms that shape tacit knowledge sharing in three open innovation partnerships. An online survey was used to gather data about individual participants in each partnership and their social relations with fellow participants. Survey data were analysed using a combination of descriptive and statistical social network analysis techniques. The descriptive analysis measured actor centrality and two-path brokerage whereas the statistical analysis used ERGMs to assess the relative abundance or absence of specific network configurations. Semi-structured interviews involving a subset of the survey participants complemented the social network analysis. Mixing quantitative network and qualitative interview data can be fraught due to the complex ontological and epistemological issues involved. For this reason, a critical realist perspective was used to interpret quantitative and qualitative results. This thesis breaks new ground in applying a critical realist approach to mixed-method social network analysis. \medskip
+This thesis employs a mixed-method approach to examine the social mechanisms that shape tacit knowledge sharing in three open innovation partnerships. An online survey was used to gather data about individual participants in each partnership and their social relations with fellow participants. Survey data were analysed using a combination of descriptive and statistical social network analysis techniques. The descriptive analysis measured actor centrality and two-path brokerage whereas the statistical analysis used ERGMs to assess the relative abundance or absence of specific network configurations. Semi-structured interviews involving a subset of the survey participants complemented the social network analysis. Mixing quantitative network and qualitative interview data can be fraught due to the complex ontological and epistemological issues involved. For this reason, a critical realist perspective was used to interpret quantitative and qualitative results. This thesis breaks new ground in applying a critical realist approach to mixed-method social network analysis. \medskip
 
 The next chapter (Chapter \ref{chp:case_overview}) details the innovation challenge in each of the three open innovation cases recruited. Each case is quite different looking at their industrial context, the stage they are at, participant numbers, their demographic features, spatial proximity to one another, and patterns of social interaction. 
